@@ -1,0 +1,40 @@
+.top-banner {
+    
+    background-image: url(/assets/homepage/topbanner_withtext.png);
+    background-repeat: no-repeat;
+    height: 150px;
+    max-height: 150px;
+    width: 100vw;
+  }
+
+.sticker-area{
+    height: 70vh;
+    min-height: 70vh;
+    width: 100vw;
+    min-width: 100vw;
+}
+
+.sticker{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+.bottom-banner{
+    bottom:0px;
+    height: 100px;
+    max-height: 10%;
+    width: 100%;
+}
+.bottom-logo{
+    background-image: url(/assets/logo/FROOD.png);
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    
+    height: 20px;
+    width: 65px;
+    max-height: 100%;
+    max-width: 100%;
+}
