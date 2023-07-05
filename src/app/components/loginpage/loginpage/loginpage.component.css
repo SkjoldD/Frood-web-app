@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
+
+.top-banner {
+    display: flex;
+    justify-content: center;
+    background-image: url(/assets/banner/topbanner.png);
+    background-repeat: repeat;
+    height: 143px;
+    width: 100vw;
+  }
+  
+.top-logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 33%;
+    width: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.velkommen-ven{
+    font-family: url(/assets/font/static/Montserrat-Regular.ttf);
+    font-weight: 100;
+    color: #E7948E;
+    font-size: 40px;
+    text-align: center;
+}
+
+.login-box-container{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 50%;
+}
+.login-box{
+    border-radius: 10px;
+    max-width: 100%;
+    min-width: 80%;
+    height: 100%;
+    background-color: #F5ECE9;
+}
+
+.input-form {
+    min-width: 80%;
+    max-width: 90%;
+    width: 90%;
+}
+
+.input-full-width {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
