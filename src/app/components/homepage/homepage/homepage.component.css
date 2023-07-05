@@ -1,15 +1,24 @@
 .top-banner {
-    
-    background-image: url(/assets/homepage/topbanner_withtext.png);
-    background-repeat: no-repeat;
-    height: 150px;
-    max-height: 150px;
+    display: flex;
+    justify-content: center;
+    background-image: url(/assets/banner/topbanner.png);
+    background-repeat: repeat;
+    height: 143px;
     width: 100vw;
   }
-
+  
+.top-logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 33%;
+    width: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
 .sticker-area{
-    height: 70vh;
-    min-height: 70vh;
+    height: 60vh;
+    min-height: 60vh;
     width: 100vw;
     min-width: 100vw;
 }
@@ -21,6 +30,31 @@
     max-width: 100%;
 }
 
+.loginbuttonarea{
+    justify-content: center;
+    display:flex;
+    height:20vh;
+}
+
+.loginbutton{
+    background-size: 100% 100%;
+    text-align: center;
+    width: 500px;
+    max-width: 40vw;
+    min-width: 300px;
+    height: 10vh;
+}
+
+.mdc-button {
+    width:250px;
+    min-width: 40vw;
+    max-width: 80vw;
+}
+
+.mat-mdc-raised-button.mat-accent {
+    --mdc-protected-button-container-color: #E7948E;
+    --mdc-protected-button-label-text-color: #fff;
+}
 .bottom-banner{
     bottom:0px;
     height: 100px;
