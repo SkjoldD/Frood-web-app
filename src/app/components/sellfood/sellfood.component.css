@@ -1,0 +1,5 @@
+.sellfood-input-container{
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+}
