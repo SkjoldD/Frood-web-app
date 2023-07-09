@@ -8,6 +8,8 @@ import { ProfileHomeComponent } from './components/profile/profileHome/profile-h
 import { ErrorComponentComponent } from './components/utilities/error-component/error-component.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { GoogleMapsModule } from '@angular/google-maps'
+
 import {Component} from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
@@ -17,6 +19,9 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
 import { SignupComponent } from './components/signup/signup.component';
+import { StartingpageComponent } from './components/startingpage/startingpage.component';
+
+
 
 @NgModule({
   declarations: [
@@ -25,7 +30,8 @@ import { SignupComponent } from './components/signup/signup.component';
     ProfileHomeComponent,
     ErrorComponentComponent,
     LoginpageComponent,
-    SignupComponent
+    SignupComponent,
+    StartingpageComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +42,9 @@ import { SignupComponent } from './components/signup/signup.component';
     MatIconModule,
     MatInputModule,
     FormsModule, 
-    MatFormFieldModule
+    MatFormFieldModule,
+
+    GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

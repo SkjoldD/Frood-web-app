@@ -10,7 +10,7 @@
     margin-bottom: auto;
 }
 
-.velkommen-ven{
+.font-headlines{
     font-family: url(/assets/font/static/Montserrat-Regular.ttf);
     font-weight: 100;
     color: #E7948E;
@@ -25,7 +25,7 @@
     display: flex;
     justify-content: center;
     align-items: center; 
-    height: 50%;
+    height: 40%;
     max-width: 70%;
     background-color: #F5ECE9;
     border-radius: 10px;
@@ -48,4 +48,27 @@ a:visited {
 
 .signup-text{
     text-align: center;
+}
+
+.loginbuttonarea{
+    justify-content: center;
+    display:flex;
+    flex-wrap: wrap;
+    height: 22vh;    
+}
+
+.loginbutton{
+    text-align: center;
+    width: 70%;
+}
+
+.mdc-button {
+    width:250px;
+    min-width: 40vw;
+    max-width: 80vw;
+}
+
+.mat-mdc-raised-button.mat-accent {
+    --mdc-protected-button-container-color: #E7948E;
+    --mdc-protected-button-label-text-color: #fff;
 }

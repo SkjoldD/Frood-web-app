@@ -4,12 +4,14 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { ErrorComponentComponent } from './components/utilities/error-component/error-component.component';
 import { LoginpageComponent } from './components/loginpage/loginpage.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { StartingpageComponent } from './components/startingpage/startingpage.component';
 
 
 const routes: Routes = [
   { path: '', component: HomepageComponent},
   { path: 'login', component: LoginpageComponent},
   { path: 'signup', component: SignupComponent},
+  { path: 'startingpage', component: StartingpageComponent},
   { path: '**', component: ErrorComponentComponent}
 ];
 
