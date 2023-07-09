@@ -1,9 +1,26 @@
 <div class="top-banner-no-logo">
 
 </div>
-
 <google-map 
-    height="78vh"
-    width="100%"
-></google-map>
-
+    height="82vh" 
+    width="100%" 
+    [zoom]="zoom" 
+    [center]="center" 
+    [options]="options">
+    
+    <map-marker *ngFor="let marker of markers"
+                [position]="marker.position"></map-marker>
+</google-map>
+<div class="menu-bottom-container">
+    <div class="menu-bottom-container-window">
+        <div class="menu-bottom-container-window-element-container">
+            <img class="menu-bottom-container-window-element" src="assets/icons/menu/menua.png"/>
+        </div>
+        <div class="menu-bottom-container-window-element-container">
+            <img class="menu-bottom-container-window-element" src="assets/icons/menu/menub.png"/>
+        </div>
+        <div class="menu-bottom-container-window-element-container">
+            <img class="menu-bottom-container-window-element" src="assets/icons/menu/menuc.png"/>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+
+.menu-bottom-container{
+    width: 100vw;
+    height: 80px;
+    min-height: 15vh;
+    margin-top: min(-16vh, -80px); /* IMPORATANT, IF CHANGES OCCUR IN WINDOW MARGIN, ADD HERE. REGULAR IS -15. ADD ON THE MARGIN FROM WINDOW*/
+    border: none;
+    position: relative;
+    border-radius: 50px;
+    opacity: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.menu-bottom-container-window{
+    margin: 1vh; /*THIS REF*/
+    height: 100%;
+    width: 100%;
+    background-color: aliceblue;
+    color: black !important;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.30));
+
+    border-radius: min(5%,10px);
+
+    display: flex;
+    justify-content: center;
+    align-items: row; 
+
+}
+
+.menu-bottom-container-window-element-container{
+    height: auto;
+    width: 100%;
+}
+.menu-bottom-container-window-element{
+    height: 100%;
+    width: auto;
+}
