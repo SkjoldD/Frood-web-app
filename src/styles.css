@@ -10,9 +10,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .complete-view{
     background-color: #FBFDF7;
+    /*background-color: #a9ea27;*/
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
   }
+  
 
 .top-banner-with-logo {
     display: flex;
