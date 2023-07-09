@@ -1,7 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
+
 body{
     margin: 0
 }
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.complete-view{
+    background-color: #FBFDF7;
+    width: 100vw;
+    height: 100vh;
+  }
+
+.top-banner {
+    display: flex;
+    justify-content: center;
+    background-image: url(/assets/banner/topbanner.png);
+    background-repeat: repeat-x;
+    height: 18vh;
+    width: 100%;
+    background-size: contain;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.20));
+}  
+.plaintext {
+    color: #9F9F9F ;
+}  
+ 

@@ -1,14 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
 
-.top-banner {
-    display: flex;
-    justify-content: center;
-    background-image: url(/assets/banner/topbanner.png);
-    background-repeat: repeat;
-    height: 143px;
-    width: 100vw;
-  }
-  
 .top-logo{
     display: block;
     margin-left: auto;
@@ -28,27 +19,33 @@
 }
 
 .login-box-container{
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center; 
     height: 50%;
-}
-.login-box{
-    border-radius: 10px;
-    max-width: 100%;
-    min-width: 80%;
-    height: 100%;
+    max-width: 70%;
     background-color: #F5ECE9;
+    border-radius: 10px;
+    padding: 5vw;
 }
 
-.input-form {
-    min-width: 80%;
-    max-width: 90%;
-    width: 90%;
+.input-field {
+   width: 100%;
+   border-radius: 10px;
 }
 
-.input-full-width {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
+a:link {
+    color: #E7948E;
+    background-color: transparent;
+}
+  
+a:visited {
+    color: #E7948E;
+}
+
+.signup-text{
+    text-align: center;
 }
