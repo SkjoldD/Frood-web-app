@@ -14,7 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { GoogleMapsModule } from '@angular/google-maps'
 
-import {Component} from '@angular/core';
+import {Component, ElementRef, ViewChild, inject} from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
@@ -23,8 +23,17 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule, FormControl, Validators, ReactiveFormsModule} from '@angular/forms';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
-import {NgFor} from '@angular/common';
+import {NgFor, AsyncPipe} from '@angular/common';
 import {MatSelectModule} from '@angular/material/select';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {ThemePalette} from '@angular/material/core';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {COMMA, ENTER} from '@angular/cdk/keycodes';
+import {MatAutocompleteSelectedEvent, MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatChipInputEvent, MatChipsModule} from '@angular/material/chips';
+import {Observable} from 'rxjs';
+import {map, startWith} from 'rxjs/operators';
+import {LiveAnnouncer} from '@angular/cdk/a11y';
 
 @NgModule({
   declarations: [
@@ -52,7 +61,13 @@ import {MatSelectModule} from '@angular/material/select';
     MatSelectModule,
     ReactiveFormsModule,
     NgFor,
-   
+    MatCheckboxModule,
+    MatSlideToggleModule,
+    MatChipsModule,
+    MatAutocompleteModule,
+    ReactiveFormsModule,
+    AsyncPipe,
+
     GoogleMapsModule
   ],
   providers: [],

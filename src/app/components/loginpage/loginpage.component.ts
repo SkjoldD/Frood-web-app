@@ -15,6 +15,8 @@ export class LoginpageComponent {
   loginButtonClick(){
     this._router.navigate(['startingpage'])
   }
+
+  hide = true;
 }
 
 

@@ -16,6 +16,6 @@ export class SignupComponent {
     this._router.navigate(['startingpage'])
   }
   sellfoodButtonClick(){
-    this._router.navigate(['sellfood'])
+    this._router.navigate(['**'])
   }
 }

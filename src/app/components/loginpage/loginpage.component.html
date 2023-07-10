@@ -17,16 +17,17 @@
         
         <mat-form-field class="input-field">
             <mat-label>Password</mat-label>
-            <input matInput placeholder="*********" value="">
-        </mat-form-field>
+            <input matInput [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
     </div>
     <div class="plaintext signup-text">
         Ikke medlem? <a href="signup">Sign up</a>
     </div>
     <div class="loginbuttonarea">
-        <div class="loginbutton">
-            <button mat-raised-button color="accent" 
+        <button mat-raised-button color="accent" 
         (click)="loginButtonClick()">Log Ind</button>
-        </div>
     </div>
 </div>

@@ -1,5 +1,59 @@
 .sellfood-input-container{
     flex-wrap: wrap;
-    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 40%;
+    max-width: 70%;
+    border-radius: 10px;
+    padding: 5vw;
+} 
+
+
+.checkbox-text{
+    font-family: url(/assets/font/static/Montserrat-Regular.ttf);
+    font-weight: 100;
+    color: #E7948E;
+    font-size: 16px;
+    text-align: left;
+}
+
+.map-view{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    margin-left: 10vw;   
+    /*border-radius: 20%;*/
+}
+
+.sellfood-text{
+    font-family: url(/assets/font/static/Montserrat-Regular.ttf);
+    font-weight: 100;
+    font-size: 20px;
+    color: #9F9F9F;
+}
+
+.toggle-placing{
+    text-align: right;
+}
+
+.sharefood-buttonarea{
+    justify-content: center;
+    display:flex;
+    flex-wrap: wrap;
+    height: 10vh;    
+}
+
+.mdc-button {
+    width:250px;
+    min-width: 40vw;
+    max-width: 80vw;
+}
+
+.mat-mdc-raised-button.mat-accent {
+    --mdc-protected-button-container-color: #E7948E;
+    --mdc-protected-button-label-text-color: #fff;
 }

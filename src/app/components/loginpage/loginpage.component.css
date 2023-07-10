@@ -32,11 +32,6 @@
     padding: 5vw;
 }
 
-.input-field {
-   width: 100%;
-   border-radius: 10px;
-}
-
 a:link {
     color: #E7948E;
     background-color: transparent;
@@ -55,11 +50,6 @@ a:visited {
     display:flex;
     flex-wrap: wrap;
     height: 22vh;    
-}
-
-.loginbutton{
-    text-align: center;
-    width: 70%;
 }
 
 .mdc-button {

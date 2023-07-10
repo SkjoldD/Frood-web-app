@@ -49,3 +49,26 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     font-size: 40px;
     text-align: center;
 }
+
+.font-medium-headlines{
+    font-family: url(/assets/font/static/Montserrat-Regular.ttf);
+    font-weight: 100;
+    color: #E7948E;
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.font-medium-text{
+    font-family: url(/assets/font/static/Montserrat-Regular.ttf);
+    font-weight: 100;
+    color: #E7948E;
+    font-size: 16px;
+    text-align: left;
+}
+
+.input-field {
+    width: 100%;
+    border-radius: 10px;
+ }

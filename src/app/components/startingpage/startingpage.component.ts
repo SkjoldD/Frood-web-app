@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 interface MarkerProperties {
   position: {
@@ -54,7 +55,12 @@ export class StartingpageComponent implements OnInit {
           enableHighAccuracy: true
       });
     }
-
+  
+  constructor(private _router: Router) {
     
+    }
+    basketiconButtonClick(){
+      this._router.navigate(['sellfood'])
+    }
 
 }

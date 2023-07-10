@@ -1,15 +1,24 @@
 .signup-input-container{
     flex-wrap: wrap;
-    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 40%;
+    max-width: 70%;
+    background-color: #FBFDF7;
+    border-radius: 10px;
+    padding: 5vw;
 }
 
 .assignbutton{
-    text-align: center;
-    width: 70%;
-    padding: 2%;
-    
+    justify-content: center;
+    display:flex;
+    flex-wrap: wrap;
+    height: 10vh;
 }
+
 .mdc-button {
     width:250px;
     min-width: 40vw;
