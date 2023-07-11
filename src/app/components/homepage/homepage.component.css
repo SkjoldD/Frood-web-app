@@ -22,14 +22,14 @@
     width: auto;
 }
 
-.loginbuttonarea{
+.buttonarea{
     justify-content: center;
     display:flex;
     flex-wrap: wrap;
     height: 22vh;
 }
 
-.loginbutton{
+.button{
     text-align: center;
     width: 70%;
 }

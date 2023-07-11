@@ -11,7 +11,8 @@ import { ProfileHomeComponent } from './components/profile/profileHome/profile-h
 import { SellfoodComponent } from './components/sellfood/sellfood.component';
 import { ErrorComponentComponent } from './components/utilities/error-component/error-component.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { BuyfoodComponent } from './components/buyfood/buyfood.component';
+import { FoodstandComponent } from './components/foodstand/foodstand.component';
 import { GoogleMapsModule } from '@angular/google-maps'
 
 import {Component, ElementRef, ViewChild, inject} from '@angular/core';
@@ -35,6 +36,7 @@ import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 import {LiveAnnouncer} from '@angular/cdk/a11y';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +46,9 @@ import {LiveAnnouncer} from '@angular/cdk/a11y';
     LoginpageComponent,
     SignupComponent,
     StartingpageComponent,
-    SellfoodComponent
+    SellfoodComponent,
+    BuyfoodComponent,
+    FoodstandComponent
   ],
   imports: [
     BrowserModule,

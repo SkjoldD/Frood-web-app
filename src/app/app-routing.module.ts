@@ -6,15 +6,21 @@ import { LoginpageComponent } from './components/loginpage/loginpage.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { StartingpageComponent } from './components/startingpage/startingpage.component';
 import { SellfoodComponent } from './components/sellfood/sellfood.component';
+import { BuyfoodComponent } from './components/buyfood/buyfood.component';
+import { ProfileHomeComponent } from './components/profile/profileHome/profile-home/profile-home.component';
+import { FoodstandComponent } from './components/foodstand/foodstand.component';
 
 
 const routes: Routes = [
   { path: '', component: HomepageComponent},
   { path: 'login', component: LoginpageComponent},
   { path: 'signup', component: SignupComponent},
+  { path: 'profile', component: ProfileHomeComponent},
   { path: 'sellfood', component: SellfoodComponent},
   { path: 'startingpage', component: StartingpageComponent},
   { path: 'signup', component: SignupComponent},
+  { path: 'buyfood', component: BuyfoodComponent},
+  { path: 'foodstand', component: FoodstandComponent},
   { path: '**', component: ErrorComponentComponent}
 ];
 
