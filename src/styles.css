@@ -13,7 +13,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     /*background-color: #a9ea27;*/
     width: 100vw;
     min-height: 100vh;
-  }
+}
 
 .plaintext {
     color: #9F9F9F ;

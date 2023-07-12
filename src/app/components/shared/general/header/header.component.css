@@ -1,10 +1,40 @@
+@import url('https://fonts.cdnfonts.com/css/coiny');
+
+
 .top-banner-no-logo {
     display: flex;
     justify-content: center;
-    background-image: url(/assets/banner/top-banner-no-logo.png);
+    background-image: url(/assets/banner/topbanner-no-logo.png);
     background-repeat: repeat-x;
-    height: 12vh;
+    height: 15vh;
     width: 100%;
     background-size: contain;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.20));
+    position: relative;
+    z-index: 1;
 }  
+
+.coiny-style{   
+    color: #B6D9C9;
+    font-family: Coiny;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.8px;
+    -webkit-text-stroke-color: #FBFDF7;
+    -webkit-text-stroke-width: 2px;
+    text-align: center;
+    margin-bottom: min(2vh, 80px); /* IMPORATANT, IF CHANGES OCCUR IN WINDOW MARGIN, ADD HERE. REGULAR IS -15. ADD ON THE MARGIN FROM WINDOW*/
+    border: none;
+    position: relative;
+    border-radius: 50px;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    z-index: 1;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.20));
+
+}
+

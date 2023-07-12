@@ -1,6 +1,5 @@
 <div class="complete-view">
-    <app-header></app-header>
-    <div class="font-headlines"> Sælg mad </div> 
+    <app-header [title]="'Sælg mad'"></app-header>
     <div class="sellfood-input-container">
     
     <mat-form-field class="input-field">
@@ -71,7 +70,7 @@
             <mat-label>Kommentarer</mat-label>
             <textarea matInput></textarea>
         </mat-form-field>
-        chips her!
+        
         <div class="sharefood-buttonarea">
             <button mat-raised-button color="accent" 
             (click)="sharefoodButtonClick()">Del mad</button>

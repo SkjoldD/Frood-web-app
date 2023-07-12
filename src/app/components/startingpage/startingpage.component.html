@@ -1,7 +1,7 @@
-<app-header class="banner-top-container"></app-header>
-
+<app-header [title]="'Kort'"></app-header>
+<div class="map-container">
 <google-map 
-    height="103vh" 
+    height="100%" 
     width="100%" 
     [zoom]="zoom" 
     [center]="center" 
@@ -10,6 +10,7 @@
     <map-marker *ngFor="let marker of markers"
                 [position]="marker.position"></map-marker>
 </google-map>
+</div>
 <div class="menu-bottom-container">
     <div class="menu-bottom-container-window">
             <button (click)="foodstandiconButtonClick()">
