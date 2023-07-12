@@ -12,21 +12,26 @@
             </div>
 
 
-
-        <div class="font-medium-headlines">Til salg!</div>
-        <app-foodstand-product-grown-item *ngFor="let productGrownItem of productGrownItems" [grownItem]="productGrownItem"></app-foodstand-product-grown-item>
-        
-        <div class="font-medium-headlines">Udsolgt!</div>
-        
-        <img class="dashed-line" src="assets/food-animations/dashed-line.png"/>
-
-        <div class="font-medium-text-vege">Jordbær</div> 
-        <div class="font-medium-text-vege"></div>         
-        <img class="basket-animations" src="assets/food-animations/strawberry-basket-soldout.png"/>
-        <div class="button-area">
-            <button mat-raised-button color="accent" 
-            (click)="sellfoodButtonClick()">Sæt til salg</button>
+        <ng-container *ngIf="HasActiveItems() == true">
+            <div class="font-medium-headlines">Til salg!</div>
+        </ng-container>
+        <div *ngFor="let productGrownItem of productGrownItems; let i = index">
+            <div *ngIf="productGrownItem.amount > 0">
+                <app-foodstand-product-grown-item [grownItem]="productGrownItem"></app-foodstand-product-grown-item>
+            </div>
         </div>
+        
+
+        <div *ngIf="HasEmptyItems() == false">
+            <div class="font-medium-headlines">Udsolgt!</div>
+        </div>
+
+        <div *ngFor="let productGrownItem of productGrownItems; let i = index">
+            <div *ngIf="productGrownItem.amount == 0">
+                <app-foodstand-product-grown-item-soldout [grownItem]="productGrownItem"></app-foodstand-product-grown-item-soldout>
+            </div>
+        </div>
+        
         <p>change image and text on button, on button press
         PLUS make a pop up when putting up for sale again (amount)</p>
     </div>

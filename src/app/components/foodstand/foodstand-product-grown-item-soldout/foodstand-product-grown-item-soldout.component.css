@@ -1,0 +1,56 @@
+.input-container{
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 40%;
+    background-color: #FBFDF7;
+    border-radius: 10px;
+}
+
+.button-area{
+    justify-content: center;
+    display:flex;
+    flex-wrap: wrap;
+    height: 10vh;
+}
+
+.mdc-button {
+    width:250px;
+    min-width: 40vw;
+    max-width: 80vw;
+}
+
+.mat-mdc-raised-button.mat-accent {
+    --mdc-protected-button-container-color: #E7948E;
+    --mdc-protected-button-label-text-color: #fff;
+}
+
+.dashed-line {
+    border: 1% dashed;
+    color:#B6D9C9;
+    background-repeat: repeat-x;
+    width: 100%;
+    background-size: contain;
+  }
+
+.basket-animations{
+    display: flex;
+    width: 80%;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.basket-animations-soldout{
+    filter: brightness(1) saturate(0%);
+}
+
+.font-medium-text-vege{
+    font-family: url(/assets/font/static/Montserrat-Regular.ttf);
+    font-weight: 100;
+    color: #E7948E;
+    font-size: 20px;
+    text-align: center;
+}

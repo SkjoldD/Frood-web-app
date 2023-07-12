@@ -39,6 +39,7 @@ import { FoodstandProductGrownItemComponent } from './components/foodstand/foods
 import { HeaderComponent } from './components/shared/general/header/header.component';
 import { FooterComponent } from './components/shared/general/footer/footer.component';
 import { HeaderWithLogoComponent } from './components/shared/general/header-with-logo/header-with-logo.component';
+import { FoodstandProductGrownItemSoldoutComponent } from './components/foodstand/foodstand-product-grown-item-soldout/foodstand-product-grown-item-soldout.component';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { HeaderWithLogoComponent } from './components/shared/general/header-with
     FoodstandProductGrownItemComponent,
     HeaderComponent,
     FooterComponent,
-    HeaderWithLogoComponent
+    HeaderWithLogoComponent,
+    FoodstandProductGrownItemSoldoutComponent
   ],
   imports: [
     BrowserModule,
