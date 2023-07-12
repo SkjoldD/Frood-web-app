@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center; 
     height: 40%;
-    max-width: 70%;
+    max-width: 80%;
     background-color: #FBFDF7;
     border-radius: 10px;
     padding: 5vw;
@@ -17,21 +17,22 @@
     font-weight: 100;
     color: #E7948E;
     font-size: 24px;
-    text-align: left;
-    width: 100%;
-    border-radius: 10px;
 }
 
 .profile-pic{
-    max-width: 100%;
-    width: 35%;
+    max-width: 45%;
+    min-width: 40%;
     border-radius: 50%;
-    ;}
+}
 
 .image-text{
-   display: inline-block    ;}   
-   
-.menu-bottom-container-window-element-container{
-    height: auto;
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+}   
+
+.profile-settings-icon-placement{   
+    align-items: center;
 }
