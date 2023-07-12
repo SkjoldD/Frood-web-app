@@ -1,17 +1,25 @@
-
 .menu-bottom-container{
     width: 100vw;
     height: 80px;
-    min-height: 15vh;
-    margin-top: min(-16vh, -80px); /* IMPORATANT, IF CHANGES OCCUR IN WINDOW MARGIN, ADD HERE. REGULAR IS -15. ADD ON THE MARGIN FROM WINDOW*/
+    margin-top: min(-15vh, 80px); /* IMPORATANT, IF CHANGES OCCUR IN WINDOW MARGIN, ADD HERE. REGULAR IS -15. ADD ON THE MARGIN FROM WINDOW*/
+    position: relative;
+    border-radius: 50px;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.banner-top-container{
+    margin-bottom: min(-15vh, 80px); /* IMPORATANT, IF CHANGES OCCUR IN WINDOW MARGIN, ADD HERE. REGULAR IS -15. ADD ON THE MARGIN FROM WINDOW*/
     border: none;
     position: relative;
     border-radius: 50px;
     opacity: 1;
-
     display: flex;
     justify-content: center;
     align-items: center; 
+    z-index: 1;
 }
 
 .menu-bottom-container-window{
