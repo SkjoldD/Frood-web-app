@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ProductFoodGrown } from 'src/app/classes/product-food-grown';
+import { GrownType } from 'src/app/classes/enums/growntype';
+
 
 @Injectable({
   providedIn: 'root'
@@ -18,11 +20,11 @@ export class ProductgrowntypeserviceService {
 
   read_all()
   { 
-    this.productGrownItem1 = new ProductFoodGrown(-1,"Gulerod","10 Kg",3);
-    this.productGrownItem2 = new ProductFoodGrown(-1,"Æble","5 Kg",9);
-    this.productGrownItem3 = new ProductFoodGrown(-1,"Kartofler","17 Kg",20);
-    this.productGrownItem4 = new ProductFoodGrown(-1,"Kirsebær","1 Bakke", 5);
-    this.productGrownItem5 = new ProductFoodGrown(-1,"lart","123123 Kg",3);
+    this.productGrownItem1 = new ProductFoodGrown(-1,GrownType.Carrot,"10 Kg",1);
+    this.productGrownItem2 = new ProductFoodGrown(-1,GrownType.Pear,"5 Kg",9);
+    this.productGrownItem3 = new ProductFoodGrown(-1,GrownType.Potato,"17 Kg",10);
+    this.productGrownItem4 = new ProductFoodGrown(-1,GrownType.Strawberry,"1 Bakke", 0);
+    this.productGrownItem5 = new ProductFoodGrown(-1,GrownType.Potato,"123123 Kg",3);
 
     this.productGrownItems.push(this.productGrownItem1);
     this.productGrownItems.push(this.productGrownItem2);
