@@ -35,6 +35,10 @@ import {MatChipInputEvent, MatChipsModule} from '@angular/material/chips';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 import {LiveAnnouncer} from '@angular/cdk/a11y';
+import { FoodstandProductGrownItemComponent } from './components/foodstand/foodstand-product-grown-item/foodstand-product-grown-item.component';
+import { HeaderComponent } from './components/shared/general/header/header.component';
+import { FooterComponent } from './components/shared/general/footer/footer.component';
+import { HeaderWithLogoComponent } from './components/shared/general/header-with-logo/header-with-logo.component';
 
 
 @NgModule({
@@ -48,7 +52,11 @@ import {LiveAnnouncer} from '@angular/cdk/a11y';
     StartingpageComponent,
     SellfoodComponent,
     BuyfoodComponent,
-    FoodstandComponent
+    FoodstandComponent,
+    FoodstandProductGrownItemComponent,
+    HeaderComponent,
+    FooterComponent,
+    HeaderWithLogoComponent
   ],
   imports: [
     BrowserModule,

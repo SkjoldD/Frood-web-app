@@ -14,29 +14,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 100vw;
     min-height: 100vh;
   }
-  
-
-.top-banner-with-logo {
-    display: flex;
-    justify-content: center;
-    background-image: url(/assets/banner/top-banner-logo.png);
-    background-repeat: repeat-x;
-    height: 18vh;
-    width: 100%;
-    background-size: contain;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.20));
-}  
-
-.top-banner-no-logo {
-    display: flex;
-    justify-content: center;
-    background-image: url(/assets/banner/top-banner-no-logo.png);
-    background-repeat: repeat-x;
-    height: 12vh;
-    width: 100%;
-    background-size: contain;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.20));
-}  
 
 .plaintext {
     color: #9F9F9F ;

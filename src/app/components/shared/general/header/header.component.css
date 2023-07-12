@@ -1,0 +1,10 @@
+.top-banner-no-logo {
+    display: flex;
+    justify-content: center;
+    background-image: url(/assets/banner/top-banner-no-logo.png);
+    background-repeat: repeat-x;
+    height: 12vh;
+    width: 100%;
+    background-size: contain;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.20));
+}  

@@ -1,38 +1,23 @@
 <div class="complete-view">
-    <div class="top-banner-no-logo"></div>
+    <app-header></app-header>
     <div class="input-container">
         <div class="input-field">
             <div class="font-headlines">*Navn*'s madbod</div>
+            
+            <div class="font-headlines">Anmodninger</div>
+
             <div class="button-area">
                 <button mat-raised-button color="accent" 
                 (click)="sellfoodButtonClick()">Sæt mad til salg</button>
             </div>
+
+
+
         <div class="font-medium-headlines">Til salg!</div>
-        <img class="dashed-line" src="assets/food-animations/dashed-line.png"/>
-        <div class="font-medium-text-vege">Kartoffel</div> 
-        <div class="font-medium-text-vege">X stk/kg tilbage</div> 
-        <img class="basket-animations" src="assets/food-animations/potato-basket.png"/>
-        <div class="button-area">
-            <button mat-raised-button color="accent" 
-            (click)="sellfoodButtonClick()">Meld udsolgt</button>
-        </div>
-        <img class="dashed-line" src="assets/food-animations/dashed-line.png"/>
-        <div class="font-medium-text-vege">Gulerod</div> 
-        <div class="font-medium-text-vege">X stk/kg tilbage</div> 
-        <img class="basket-animations" src="assets/food-animations/carrot-basket.png"/>
-        <div class="button-area">
-            <button mat-raised-button color="accent" 
-            (click)="sellfoodButtonClick()">Meld udsolgt</button>
-        </div>
-        <img class="dashed-line" src="assets/food-animations/dashed-line.png"/>
-        <div class="font-medium-text-vege">Gulerod</div> 
-        <div class="font-medium-text-vege">X stk/kg tilbage</div>         
-        <img class="basket-animations" src="assets/food-animations/pear-basket.png"/>
-        <div class="button-area">
-            <button mat-raised-button color="accent" 
-            (click)="sellfoodButtonClick()">Meld udsolgt</button>
-        </div>
+        <app-foodstand-product-grown-item *ngFor="let productGrownItem of productGrownItems" [grownItem]="productGrownItem"></app-foodstand-product-grown-item>
+        
         <div class="font-medium-headlines">Udsolgt!</div>
+        
         <img class="dashed-line" src="assets/food-animations/dashed-line.png"/>
 
         <div class="font-medium-text-vege">Jordbær</div> 
@@ -43,7 +28,7 @@
             (click)="sellfoodButtonClick()">Sæt til salg</button>
         </div>
         <p>change image and text on button, on button press
-        PLUS make a pop up when putting up for sale again (amaount)</p>
+        PLUS make a pop up when putting up for sale again (amount)</p>
     </div>
     </div>
 </div>

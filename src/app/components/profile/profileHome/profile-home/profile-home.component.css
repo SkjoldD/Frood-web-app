@@ -29,4 +29,9 @@
     ;}
 
 .image-text{
-   display: inline-block    ;}    
+   display: inline-block    ;}   
+   
+.menu-bottom-container-window-element-container{
+    height: auto;
+    width: 100%;
+}
