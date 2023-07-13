@@ -1,7 +1,7 @@
 .map-container{
     width: 100vw;
     height: 100vh;
-    margin-top:-12vh; /* IMPORATANT, IF CHANGES OCCUR IN WINDOW MARGIN, ADD HERE. REGULAR IS -15. ADD ON THE MARGIN FROM WINDOW*/
+    margin-top:-16vh; /* IMPORATANT, IF CHANGES OCCUR IN WINDOW MARGIN, ADD HERE. REGULAR IS -15. ADD ON THE MARGIN FROM WINDOW*/
 }
 
 .menu-bottom-container{

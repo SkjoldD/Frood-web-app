@@ -2,28 +2,29 @@
     <app-header [title]="'Sælg mad'"></app-header>
     <div class="sellfood-input-container">
     
-    <mat-form-field class="input-field">
-        <mat-label>Æble, pære</mat-label>
-        <mat-select [formControl]="foodControl" required>
-            <mat-option>--</mat-option>
-            <mat-option *ngFor="let food of foods" [value]="food">
-            {{food.name}}
-            </mat-option>
-        </mat-select>
-        <mat-error *ngIf="foodControl.hasError('required')">Vælg en vare</mat-error>
-    </mat-form-field>
+        <mat-form-field class="input-field">
+            <mat-label>Æble, pære</mat-label>
+            <mat-select [formControl]="foodControl" required>
+                <mat-option>--</mat-option>
+                <mat-option *ngFor="let food of foods" [value]="food">
+                {{food.name}}
+                </mat-option>
+            </mat-select>
+            <mat-error *ngIf="foodControl.hasError('required')">Vælg en vare</mat-error>
+        </mat-form-field>
 
-    <mat-form-field class="input-field">
-        <mat-label>Antal</mat-label>
-        <input matInput placeholder="kg. eller stk." value="">
-    </mat-form-field>
+        <mat-form-field class="input-field">
+            <mat-label>Antal</mat-label>
+            <input matInput placeholder="kg. eller stk." value="">
+        </mat-form-field>
     
-    <div class="font-medium-headlines"> Hvor kan det findes? </div>
-       
-    <section class="sellfood-text"> Brug min adresse
-        <mat-checkbox class="checkbox-margin"></mat-checkbox>
-    </section>
-    </div>
+        <div class="font-medium-headlines"> Hvor kan det findes? </div>
+        <div class="input-field"> 
+            <section class="sellfood-text"> Brug min adresse
+                <mat-checkbox class="checkbox-margin"></mat-checkbox>
+            </section>
+        </div>
+    </div> 
     
     <div class="map-view">
         <google-map 
@@ -47,20 +48,24 @@
         </div>
         <div class="sellfood-text">Gratis <mat-slide-toggle class="toggle-placing"></mat-slide-toggle>
         </div>
-    </div> 
     
-    <section class="sellfood-text">
-        <mat-checkbox class="checkbox-margin">24 t</mat-checkbox>
-    </section>
-    
-    <section class="sellfood-text">
-        <mat-checkbox class="checkbox-margin"> 48 t</mat-checkbox> 
-    </section>
-    
-    <section class="sellfood-text">
-        <mat-checkbox class="checkbox-margin">72 t</mat-checkbox>
-    </section>
-    
+    <div class="font-medium-headlines"> Annonce udløber efter</div>
+
+    <div class="checkbox-container">
+        <section class="checkbox-hours-text"> 24 t
+            <mat-checkbox class="checkbox-column"></mat-checkbox>
+        </section>
+
+        <section class="checkbox-hours-text"> 48 t
+            <mat-checkbox class="checkbox-column"> </mat-checkbox> 
+        </section>
+        
+        <section class="checkbox-hours-text">72 t
+            <mat-checkbox class="checkbox-column"></mat-checkbox>
+        </section>
+    </div>
+</div>
+
     <div class="input-field">
         <div class="sharefood-buttonarea">
                 <button mat-raised-button color="accent" 
@@ -70,6 +75,8 @@
             <mat-label>Kommentarer</mat-label>
             <textarea matInput></textarea>
         </mat-form-field>
+        
+
         
         <div class="sharefood-buttonarea">
             <button mat-raised-button color="accent" 
