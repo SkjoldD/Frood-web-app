@@ -153,5 +153,11 @@ export class SellfoodComponent implements OnInit {
     sharefoodButtonClick(){
       this._router.navigate(['startingpage'])
     }
-
+    
+    useMyAddress: boolean=false;
+    UseMyAddress(){
+      this.useMyAddress=!this.useMyAddress;
+      console.log(this.useMyAddress);
+    }
+    
 }

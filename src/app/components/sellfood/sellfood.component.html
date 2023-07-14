@@ -20,13 +20,14 @@
     
         <div class="font-medium-headlines"> Hvor kan det findes? </div>
         <div class="input-field"> 
-            <section class="sellfood-text"> Brug min adresse
-                <mat-checkbox class="checkbox-margin"></mat-checkbox>
+            <section class="sellfood-text"> Brug min placering
+                <mat-checkbox class="checkbox-margin" (change)="UseMyAddress()"></mat-checkbox>
+                
             </section>
         </div>
     </div> 
     
-    <div class="map-view">
+    <div *ngIf="useMyAddress==false" class="map-view">
         <google-map 
             height="25vh" 
             width="90%" 
@@ -40,31 +41,40 @@
     
     <div class="sellfood-input-container">
         <div class="input-field">
-        <div class="sellfood-text">Mobilepay <mat-slide-toggle class="toggle-placing"></mat-slide-toggle>
-        </div>
-        <div class="sellfood-text">Kontant <mat-slide-toggle class="toggle-placing"></mat-slide-toggle>
-        </div>
-        <div class="sellfood-text">Vis mobil nr. <mat-slide-toggle class="toggle-placing"></mat-slide-toggle>
-        </div>
-        <div class="sellfood-text">Gratis <mat-slide-toggle class="toggle-placing"></mat-slide-toggle>
+            <div class="sellfood-text">Mobilepay <mat-slide-toggle class="toggle-placing"></mat-slide-toggle>
+            </div>
+            <div class="sellfood-text">Kontant <mat-slide-toggle class="toggle-placing"></mat-slide-toggle>
+            </div>
+            <div class="sellfood-text">Vis mobil nr. <mat-slide-toggle class="toggle-placing"></mat-slide-toggle>
+            </div>
+            <div class="sellfood-text">Gratis <mat-slide-toggle class="toggle-placing"></mat-slide-toggle>
+            </div>
         </div>
     
-    <div class="font-medium-headlines"> Annonce udløber efter</div>
-
-    <div class="checkbox-container">
-        <section class="checkbox-hours-text"> 24 t
-            <mat-checkbox class="checkbox-column"></mat-checkbox>
-        </section>
-
-        <section class="checkbox-hours-text"> 48 t
-            <mat-checkbox class="checkbox-column"> </mat-checkbox> 
-        </section>
+        <div class="font-medium-headlines"> Annonce udløber efter</div>
         
-        <section class="checkbox-hours-text">72 t
-            <mat-checkbox class="checkbox-column"></mat-checkbox>
-        </section>
-    </div>
-</div>
+            <mat-radio-group class="radiobutton-hours-text radiobutton-container" aria-label="Select an option">
+                
+                <div class="radiobutton-container-element">
+                    <div class="radiobutton-container-text">24 t</div>
+                    <mat-radio-button value="1" ></mat-radio-button>
+                </div>
+                
+                <div class="radiobutton-container-element">
+                    <div class="radiobutton-container-text">48 t</div>
+                    <mat-radio-button value="2"></mat-radio-button>
+                </div>
+
+                <div class="radiobutton-container-element">
+                    <div class="radiobutton-container-text">72 t</div>
+                    <mat-radio-button value="3"></mat-radio-button>
+                </div>
+
+                <div class="radiobutton-container-element">
+                    <div class="radiobutton-container-text">1 u</div>
+                    <mat-radio-button value="4"></mat-radio-button>
+                </div>
+            </mat-radio-group>
 
     <div class="input-field">
         <div class="sharefood-buttonarea">
@@ -100,9 +110,10 @@
           </form>
 
         
-        <div class="sharefood-buttonarea">
-            <button mat-raised-button color="accent" 
-            (click)="sharefoodButtonClick()">Del mad</button>
+            <div class="sharefood-buttonarea">
+                <button mat-raised-button color="accent" 
+                (click)="sharefoodButtonClick()">Del mad</button>
+            </div>
         </div>
     </div>
 </div>

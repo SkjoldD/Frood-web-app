@@ -34,23 +34,28 @@
     text-align: right;
 }
 
-.checkbox-container{
+.radiobutton-container{
     padding-top: 5%;
     padding-bottom: 10%;
-    display: flex;
-    justify-content: space-between;}
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+    width: 90%;
+}
 
-.checkbox-hours-text{
+.radiobutton-hours-text{
     font-family: url(/assets/font/static/Montserrat-Regular.ttf);
     font-weight: 100;
     font-size: 20px;
     color: #9F9F9F;
+    flex-wrap: wrap;
 }
 
-.checkbox-column{
+.radiobutton-container-element{
     display: flex;
-    justify-content: space-between;}
-
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .sharefood-buttonarea{
     justify-content: center;

@@ -40,6 +40,7 @@ import { HeaderComponent } from './components/shared/general/header/header.compo
 import { FooterComponent } from './components/shared/general/footer/footer.component';
 import { HeaderWithLogoComponent } from './components/shared/general/header-with-logo/header-with-logo.component';
 import { FoodstandProductGrownItemSoldoutComponent } from './components/foodstand/foodstand-product-grown-item-soldout/foodstand-product-grown-item-soldout.component';
+import {MatRadioModule} from '@angular/material/radio';
 
 
 @NgModule({
@@ -81,6 +82,7 @@ import { FoodstandProductGrownItemSoldoutComponent } from './components/foodstan
     MatAutocompleteModule,
     ReactiveFormsModule,
     AsyncPipe,
+    MatRadioModule,
 
     GoogleMapsModule
   ],
