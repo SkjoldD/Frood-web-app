@@ -1,1 +1,9 @@
-<p>foodstandoverview works!</p>
+<div *ngFor="let foodstand of foodstands"> 
+    {{foodstand.name}} 
+    {{foodstand}} 
+    {{foodstand.location}} 
+    {{foodstand.description}} 
+    {{foodstand.productsFoodGrown}} 
+   
+    <button mat-raised-button color="accent" (click)="FoodstandButtonClick()">Madbod</button>
+</div>

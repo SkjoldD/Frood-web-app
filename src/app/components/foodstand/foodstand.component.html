@@ -13,7 +13,7 @@
         <ng-container *ngIf="HasActiveItems() == true">
             <div class="font-medium-headlines">Til salg!</div>
         </ng-container>
-        <div *ngFor="let productGrownItem of productGrownItems; let i = index">
+        <div *ngFor="let productGrownItem of foodstand.productsFoodGrown; let i = index">
             <div *ngIf="productGrownItem.amount > 0">
                 <app-foodstand-product-grown-item [grownItem]="productGrownItem"></app-foodstand-product-grown-item>
             </div>
@@ -24,7 +24,7 @@
             <div class="font-medium-headlines">Udsolgt!</div>
         </div>
 
-        <div *ngFor="let productGrownItem of productGrownItems; let i = index">
+        <div *ngFor="let productGrownItem of foodstand.productsFoodGrown; let i = index">
             <div *ngIf="productGrownItem.amount == 0">
                 <app-foodstand-product-grown-item-soldout [grownItem]="productGrownItem"></app-foodstand-product-grown-item-soldout>
             </div>

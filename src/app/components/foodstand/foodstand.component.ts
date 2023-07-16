@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { Foodstand } from 'src/app/classes/foodstands/foodstand';
 import { ProductFoodGrown } from 'src/app/classes/product-food-grown';
 import { ProductgrowntypeserviceService } from 'src/app/services/http/products/productgrowntype/productgrowntypeservice.service';
 
@@ -10,13 +11,14 @@ import { ProductgrowntypeserviceService } from 'src/app/services/http/products/p
 })
 export class FoodstandComponent {
 
+  @Input() foodstand! : Foodstand;
+
   public productGrownItems! : ProductFoodGrown[];
   public hasActiveItems : boolean = false;
   public hasEmptyItems : boolean = false;
 
-  constructor(private _router: Router, private productGrownTypeService : ProductgrowntypeserviceService) {
-    this.productGrownItems = productGrownTypeService.read_all();
-    console.log(this.productGrownItems.length);
+  constructor(private _router: Router) {
+   
   }
   sellfoodButtonClick(){
     this._router.navigate(['sellfood'])

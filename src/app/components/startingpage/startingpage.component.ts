@@ -61,7 +61,7 @@ export class StartingpageComponent implements OnInit {
     
     }
     basketiconButtonClick(){
-      this._router.navigate(['foodstand'])
+      this._router.navigate(['foodstandOverview'])
     }
     
     profileiconButtonClick(){

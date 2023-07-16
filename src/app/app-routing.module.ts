@@ -9,6 +9,7 @@ import { SellfoodComponent } from './components/sellfood/sellfood.component';
 import { BuyfoodComponent } from './components/buyfood/buyfood.component';
 import { ProfileHomeComponent } from './components/profile/profileHome/profile-home/profile-home.component';
 import { FoodstandComponent } from './components/foodstand/foodstand.component';
+import { FoodstandoverviewComponent } from './components/foodstandoverview/foodstandoverview.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent},
   { path: 'buyfood', component: BuyfoodComponent},
   { path: 'foodstand', component: FoodstandComponent},
+  { path: 'foodstandOverview', component: FoodstandoverviewComponent},
   { path: '**', component: ErrorComponentComponent}
 ];
 

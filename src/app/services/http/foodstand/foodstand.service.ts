@@ -31,7 +31,7 @@ export class FoodstandService {
 
     const locationA = new Location(-1, 3600, "Denmark", "Frederikssund", "Erantisvej", "5");
 
-    const foodstandA = new Foodstand(1, locationA, new Date(), "Skjolds madbod", "mega fed madbod uden noget mad", productGrownItems)
+    const foodstandA = new Foodstand(1, locationA, new Date(Date.now.toString()), "Skjolds madbod", "mega fed madbod uden noget mad", productGrownItems)
 
 
     const productGrownItemsB = [];
@@ -50,7 +50,7 @@ export class FoodstandService {
 
     const locationB = new Location(-1, 3600, "Denmark", "Frederiksværk", "Et eller andet sted", "5");
 
-    const foodstandB = new Foodstand(1, locationB, new Date(), "Merles madbod", "Ikke så cool som skjolds", productGrownItemsB)
+    const foodstandB = new Foodstand(1, locationB, new Date(Date.now.toString()), "Merles madbod", "Ikke så cool som skjolds", productGrownItemsB)
 
 
     this.foodstands.push(foodstandA);
