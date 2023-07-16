@@ -38,6 +38,7 @@ export class StartingpageComponent implements OnInit {
     }
 
     geogeo(){
+    navigator.geolocation
       navigator.geolocation.getCurrentPosition((position) => {
 
         this.center = {

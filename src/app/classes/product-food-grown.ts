@@ -1,6 +1,7 @@
 import { GrownType } from './enums/growntype';
 
 export class ProductFoodGrown {
+
     public constructor(
         private _id : number = -1, 
         private _grownType : GrownType = GrownType.Carrot,
