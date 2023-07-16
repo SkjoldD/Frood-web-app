@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Foodstand } from 'src/app/classes/foodstands/foodstand';
 import { ProductFoodGrown } from 'src/app/classes/product-food-grown';
 import { ProductgrowntypeserviceService } from 'src/app/services/http/products/productgrowntype/productgrowntypeservice.service';
+import { SelectedFoodstandService } from 'src/app/services/selected/foodstand/selected-foodstand.service';
 
 @Component({
   selector: 'app-foodstand',
@@ -11,15 +12,21 @@ import { ProductgrowntypeserviceService } from 'src/app/services/http/products/p
 })
 export class FoodstandComponent {
 
-  @Input() foodstand! : Foodstand;
+  public foodstand! : Foodstand;
 
-  public productGrownItems! : ProductFoodGrown[];
   public hasActiveItems : boolean = false;
   public hasEmptyItems : boolean = false;
 
-  constructor(private _router: Router) {
-   
+  constructor(private _router: Router, private _selectedFoodstandService : SelectedFoodstandService) {
+    this._selectedFoodstandService.selectedFoodstand.subscribe(val => {this.foodstand = val; console.log(this.foodstand); console.log("test");});
+    
   }
+
+  ngOnInit() {
+
+    //this.foodstand = this._selectedFoodstandService.GetFoodstand();
+  } 
+
   sellfoodButtonClick(){
     this._router.navigate(['sellfood'])
   }
@@ -28,7 +35,7 @@ export class FoodstandComponent {
   }
 
   HasActiveItems(){
-    this.productGrownItems.forEach(grownTypeElement => {
+    this.foodstand.productsFoodGrown.forEach(grownTypeElement => {
        if (grownTypeElement.amount > 0)
        {
          this.hasActiveItems = true;
@@ -43,7 +50,7 @@ export class FoodstandComponent {
 
   HasEmptyItems(){
 
-    this.productGrownItems.forEach(grownTypeElement => {
+    this.foodstand.productsFoodGrown.forEach(grownTypeElement => {
       if (grownTypeElement.amount == 0)
       {
         this.hasEmptyItems = true;

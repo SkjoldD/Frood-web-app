@@ -20,7 +20,7 @@ export class Foodstand {
     get location(): Location{return this._location;}
     set location(_val : Location){this._location = _val;}
     
-    get dateCreated(): Date{return this._dateCreated;}
+    get dateCreated(): Date{return this._dateCreated; this.dateCreated.toString()}
     set dateCreated(_val : Date){this._dateCreated = _val;}
 
     get name(): string{return this._name;}

@@ -11,10 +11,7 @@ export class FoodstandService {
 
   private foodstands : Foodstand[] = [];
     
-  constructor() { }
-
-  read_all()
-  {
+  constructor() {
     const productGrownItems = [];
 
     const productGrownItem1 = new ProductFoodGrown(-1,GrownType.Carrot,"10 Kg",1);
@@ -36,10 +33,10 @@ export class FoodstandService {
 
     const productGrownItemsB = [];
 
-    const productGrownItemB1 = new ProductFoodGrown(-1,GrownType.Carrot,"10 Kg",1);
+    const productGrownItemB1 = new ProductFoodGrown(-1,GrownType.Pear,"10 Kg",1);
     const productGrownItemB2 = new ProductFoodGrown(-1,GrownType.Pear,"5 Kg",9);
-    const productGrownItemB3 = new ProductFoodGrown(-1,GrownType.Potato,"17 Kg",10);
-    const productGrownItemB4 = new ProductFoodGrown(-1,GrownType.Strawberry,"1 Bakke", 0);
+    const productGrownItemB3 = new ProductFoodGrown(-1,GrownType.Pear,"17 Kg",10);
+    const productGrownItemB4 = new ProductFoodGrown(-1,GrownType.Pear,"1 Bakke", 0);
     const productGrownItemB5 = new ProductFoodGrown(-1,GrownType.Potato,"123123 Kg",3);
 
     productGrownItemsB.push(productGrownItemB1);
@@ -52,9 +49,32 @@ export class FoodstandService {
 
     const foodstandB = new Foodstand(1, locationB, new Date(Date.now.toString()), "Merles madbod", "Ikke så cool som skjolds", productGrownItemsB)
 
+    const productGrownItemsC = [];
+
+    const productGrownItemC1 = new ProductFoodGrown(-1,GrownType.Potato,"10 Kg",1);
+    const productGrownItemC2 = new ProductFoodGrown(-1,GrownType.Potato,"5 Kg",9);
+    const productGrownItemC3 = new ProductFoodGrown(-1,GrownType.Potato,"17 Kg",10);
+    const productGrownItemC4 = new ProductFoodGrown(-1,GrownType.Potato,"1 Bakke", 0);
+    const productGrownItemC5 = new ProductFoodGrown(-1,GrownType.Potato,"123123 Kg",3);
+
+    productGrownItemsC.push(productGrownItemC1);
+    productGrownItemsC.push(productGrownItemC2);
+    productGrownItemsC.push(productGrownItemC3);
+    productGrownItemsC.push(productGrownItemC4);
+    productGrownItemsC.push(productGrownItemC5);
+
+    const locationC = new Location(-1, 3600, "Space", "Sun", "Flare", "10");
+
+    const foodstandC = new Foodstand(1, locationC, new Date(Date.now.toString()), "Potato madman madbod med et meget langt navn hah, se hvad du vil gøre her smerl", "so much potato and a very long long long long description jadajdajdajdajdja", productGrownItemsC)
 
     this.foodstands.push(foodstandA);
     this.foodstands.push(foodstandB);
+    this.foodstands.push(foodstandC);
+   }
+
+  read_all()
+  {
+    
 
 
     return this.foodstands;
