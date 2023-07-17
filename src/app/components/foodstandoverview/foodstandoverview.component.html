@@ -6,13 +6,22 @@
             </div>
             <div class="font-description-italic">{{foodstand.description}}
             </div>
-            <img class="foodstand-image" src="assets/icons/foodstandanimation.png" alt="">
-                <div class="images-on-foodstandimage">
-                    {{foodstand.productsFoodGrown}}
+            
+            
+            <div class="foodstand-container">
+        <div>
+                <img class="foodstand-image" src="assets/icons/foodstandanimation.png" alt="">
+           
+                <div class="growntype-container-images">
+                    <div *ngFor="let product of foodstand.productsFoodGrown | slice:0:2">
+                    <img class="growntype-image" [src]="GetRelatedImage(product)"> 
+                    </div>
+            
+                    <div class="font-plus" *ngIf="foodstand.productsFoodGrown.length > 2"> + </div>
                 </div>
-                <div>
-                     {{foodstand}} 
-                </div>
+            </div>
+            </div>
+                
             <div class="font-medium-text">
             {{foodstand.location}}   
         </div>

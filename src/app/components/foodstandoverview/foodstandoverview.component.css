@@ -30,28 +30,48 @@
     font-style: italic;
     color: #E7948E;
     font-size: 16px;
-    text-align: left;
+    text-align: center;
+}
+
+.foodstand-container{
+    width: 100%;
+    height: 30vh;
 }
 
 .foodstand-image{
-    display: flex;
-    width: 80%;
-    height: 80%;
+    display: block;
+    width: auto;
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
-.images-on-foodstandimage{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60vw;
-    max-height: 50vh;
-    margin-top: min(-58vh, 50px); /* IMPORATANT, IF CHANGES OCCUR IN WINDOW MARGIN, ADD HERE. REGULAR IS -15. ADD ON THE MARGIN FROM WINDOW*/
-    position: relative;
-    opacity: 1;
-    text-align: center
+.font-plus{
+    font-family: url(/assets/font/static/Montserrat-Regular.ttf);
+    font-weight: 100;
+    color: #E7948E;
+    font-size: 43px;
+    text-align: center;
 }
+
+.growntype-container-images{
+    display: flex;
+    align-items: center; 
+    height: 25%;
+    width: 50%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: min(-20vh, 80px); 
+    position: relative;
+}
+
+.growntype-image{
+    max-width: 70%;
+    max-height: 70%;
+    min-width: 50%;
+    min-height: 50%;
+}
+
 
 .mdc-button {
     width:250px;

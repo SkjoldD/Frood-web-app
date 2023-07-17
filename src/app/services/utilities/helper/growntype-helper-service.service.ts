@@ -57,5 +57,29 @@ export class GrowntypeHelperServiceService {
     return "No name found";
   }
 
+  public GetProductImage(_grownType : GrownType){
+    if (_grownType == GrownType.Carrot){
+    return "assets/food-animations/carrot-single.png";
+  }
+  
+  if (_grownType == GrownType.Strawberry){
+    return "assets/food-animations/strawberries-single.png";
+  }
+  
+  if (_grownType == GrownType.Potato){
+    return "assets/food-animations/potato-single.png";
+  }
+  
+  if (_grownType == GrownType.Pear){
+    return "assets/food-animations/pear-single.png";
+  }
+
+  if (_grownType == GrownType.Apple){
+    return "assets/food-animations/apple-single.png";
+  }
+
+  return "Nothing found"
 
 }
+   
+  }

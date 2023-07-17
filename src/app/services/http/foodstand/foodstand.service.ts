@@ -19,12 +19,24 @@ export class FoodstandService {
     const productGrownItem3 = new ProductFoodGrown(-1,GrownType.Potato,"17 Kg",10);
     const productGrownItem4 = new ProductFoodGrown(-1,GrownType.Strawberry,"1 Bakke", 0);
     const productGrownItem5 = new ProductFoodGrown(-1,GrownType.Potato,"123123 Kg",3);
+    const productGrownItem6 = new ProductFoodGrown(-1,GrownType.Potato,"123123 Kg",3);
+    const productGrownItem7 = new ProductFoodGrown(-1,GrownType.Potato,"123123 Kg",3);
+    const productGrownItem8 = new ProductFoodGrown(-1,GrownType.Potato,"123123 Kg",3);
+    const productGrownItem9 = new ProductFoodGrown(-1,GrownType.Potato,"123123 Kg",3);
+    const productGrownItem10 = new ProductFoodGrown(-1,GrownType.Potato,"123123 Kg",3);
+    const productGrownItem11 = new ProductFoodGrown(-1,GrownType.Potato,"123123 Kg",3);
 
     productGrownItems.push(productGrownItem1);
     productGrownItems.push(productGrownItem2);
     productGrownItems.push(productGrownItem3);
     productGrownItems.push(productGrownItem4);
     productGrownItems.push(productGrownItem5);
+    productGrownItems.push(productGrownItem6);
+    productGrownItems.push(productGrownItem7);
+    productGrownItems.push(productGrownItem8);
+    productGrownItems.push(productGrownItem9);
+    productGrownItems.push(productGrownItem10);
+    productGrownItems.push(productGrownItem11);
 
     const locationA = new Location(-1, 3600, "Denmark", "Frederikssund", "Erantisvej", "5");
 
