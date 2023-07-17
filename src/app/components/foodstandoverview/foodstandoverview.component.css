@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
+
+.input-container{
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 40%;
+    max-width: 80%;
+    background-color: #FBFDF7;
+    padding: 5vw;
+}
+
+.font-medium-headlines-foodstand{
+    font-family: url(/assets/font/static/Montserrat-Regular.ttf);
+    font-weight: 100;
+    color: #E7948E;
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+    padding-top: 7%;
+}
+
+.font-description-italic {
+    font-family: url(/assets/font/static/Montserrat-Regular.ttf);
+    font-weight: 100;
+    font-style: italic;
+    color: #E7948E;
+    font-size: 16px;
+    text-align: left;
+}
+
+.foodstand-image{
+    display: flex;
+    width: 80%;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.images-on-foodstandimage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    max-height: 50vh;
+    margin-top: min(-58vh, 50px); /* IMPORATANT, IF CHANGES OCCUR IN WINDOW MARGIN, ADD HERE. REGULAR IS -15. ADD ON THE MARGIN FROM WINDOW*/
+    position: relative;
+    opacity: 1;
+    text-align: center
+}
+
+.mdc-button {
+    width:250px;
+    min-width: 40vw;
+    max-width: 80vw;
+}
+
+.mat-mdc-raised-button.mat-accent {
+    --mdc-protected-button-container-color: #E7948E;
+    --mdc-protected-button-label-text-color: #fff;
+}

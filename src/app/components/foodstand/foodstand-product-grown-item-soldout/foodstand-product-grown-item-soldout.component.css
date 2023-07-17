@@ -34,7 +34,7 @@
     background-repeat: repeat-x;
     width: 100%;
     background-size: contain;
-  }
+}
 
 .basket-animations{
     display: flex;
@@ -43,6 +43,7 @@
     margin-left: auto;
     margin-right: auto;
 }
+
 .basket-animations-soldout{
     filter: brightness(1) saturate(0%);
 }

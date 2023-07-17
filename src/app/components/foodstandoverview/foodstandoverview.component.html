@@ -1,9 +1,22 @@
-<div *ngFor="let foodstand of foodstands"> 
-    {{foodstand.name}} 
-    {{foodstand}} 
-    {{foodstand.location}} 
-    {{foodstand.description}} 
-    {{foodstand.productsFoodGrown}} 
-   
-    <button mat-raised-button color="accent" (click)="FoodstandButtonClick(foodstand)">Madbod</button>
+<div class="complete-view">
+    <app-header [title]="'Madboder'"></app-header>
+    <div class="input-field">
+        <div class="input-container" *ngFor="let foodstand of foodstands"> 
+            <div class="font-medium-headlines">{{foodstand.name}}   
+            </div>
+            <div class="font-description-italic">{{foodstand.description}}
+            </div>
+            <img class="foodstand-image" src="assets/icons/foodstandanimation.png" alt="">
+                <div class="images-on-foodstandimage">
+                    {{foodstand.productsFoodGrown}}
+                </div>
+                <div>
+                     {{foodstand}} 
+                </div>
+            <div class="font-medium-text">
+            {{foodstand.location}}   
+        </div>
+        <button mat-raised-button color="accent" (click)="FoodstandButtonClick(foodstand)">Se madbod</button>
+        </div>
+    </div>
 </div>
