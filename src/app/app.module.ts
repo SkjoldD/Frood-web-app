@@ -42,6 +42,7 @@ import { HeaderWithLogoComponent } from './components/shared/general/header-with
 import { FoodstandProductGrownItemSoldoutComponent } from './components/foodstand/foodstand-product-grown-item-soldout/foodstand-product-grown-item-soldout.component';
 import {MatRadioModule} from '@angular/material/radio';
 import { FoodstandoverviewComponent } from './components/foodstandoverview/foodstandoverview.component';
+import { CreatefoodstandComponent } from './components/foodstandoverview/createfoodstand/createfoodstand.component';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { FoodstandoverviewComponent } from './components/foodstandoverview/foods
     FooterComponent,
     HeaderWithLogoComponent,
     FoodstandProductGrownItemSoldoutComponent,
-    FoodstandoverviewComponent
+    FoodstandoverviewComponent,
+    CreatefoodstandComponent
   ],
   imports: [
     BrowserModule,

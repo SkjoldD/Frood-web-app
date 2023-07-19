@@ -30,5 +30,10 @@ export class FoodstandoverviewComponent {
     this._router.navigate(['foodstand'])
   }
 
+  CreatefoodstandButtonClick(){
+    this._router.navigate(['createfoodstand'])
+  }
+
+
 
 }
