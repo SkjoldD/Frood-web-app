@@ -13,7 +13,9 @@ import { GrowntypeHelperServiceService } from 'src/app/services/utilities/helper
 })
 
 export class FoodstandoverviewComponent {
-
+  popup =false;
+  name = 'Angular';
+  
   foodstands! : Foodstand[];
 
   constructor(private _router: Router, private _grownTypeHelperService : GrowntypeHelperServiceService, private _foodstandService:FoodstandService, private _selectedFoodstandService : SelectedFoodstandService){
@@ -33,6 +35,8 @@ export class FoodstandoverviewComponent {
   CreatefoodstandButtonClick(){
     this._router.navigate(['createfoodstand'])
   }
+
+  
 
 
 

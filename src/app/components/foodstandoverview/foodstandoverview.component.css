@@ -13,17 +13,6 @@
     padding: 5vw;
 }
 
-.font-medium-headlines-foodstand{
-    font-family: url(/assets/font/static/Montserrat-Regular.ttf);
-    font-weight: 100;
-    color: #E7948E;
-    font-size: 24px;
-    text-align: center;
-    width: 100%;
-    border-radius: 10px;
-    padding-top: 7%;
-}
-
 .font-description-italic {
     font-family: url(/assets/font/static/Montserrat-Regular.ttf);
     font-weight: 100;
@@ -31,10 +20,11 @@
     color: #E7948E;
     font-size: 16px;
     text-align: center;
+    width: 100%;
 }
 
 .foodstand-container{
-    width: auto;
+    width: 100%;
     height: 40vh;
 }
 
@@ -46,11 +36,15 @@
     margin-right: auto;
 }
 
-.container-edit-delete{
-    max-height: 10vh;
-    width: 10vw;
-    padding-left: 78vw;
+.delete-image{
+    height: 6vh;
+    width: auto;
 }
+
+.edit-image{
+    height: 5vh;
+    width: auto;
+    float: right;}
 
 .font-plus{
     font-family: url(/assets/font/static/Montserrat-Regular.ttf);
@@ -63,11 +57,9 @@
 .growntype-container-images{
     display: flex;
     justify-content: center;
-    margin-top: min(-37vh); 
+    margin-top: min(-34vh); 
     margin-left: auto;
     margin-right: auto;
- 
-
 }
 
 .growntype-image{
@@ -101,5 +93,87 @@
 
 .mat-mdc-raised-button.mat-accent {
     --mdc-protected-button-container-color: #E7948E;
-    --mdc-protected-button-label-text-color: #fff;
+    --mdc-protected-button-label-text-color: #FBFDF7;
 }
+
+.button-popup {      
+    background-color: #FBFDF7;
+    border-width: 0px;    
+}
+
+.overlay {
+    position:fixed;top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(96, 95, 95, 0.259);
+    transition: opacity 500ms;
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 55vw auto;
+    padding: 20px;
+    background: #FBFDF7;
+    border-radius: 10px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+    margin-top: 2vh;
+    font-family: url(/assets/font/static/Montserrat-Regular.ttf);
+    font-weight: 100;
+    color: #E7948E;
+    font-size: 26px;
+    text-align: center;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #7e7e7e;
+}
+
+.popup .close:hover {
+    color: #06D85F;   
+    cursor: pointer;
+}
+
+.popup .content {
+    max-height: 80%;
+    overflow: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 700px){
+
+  .popup{
+    width: 70%;
+  }
+}
+
+.button-inside-popup {
+    background-color: #E7948E;
+    border-color: #E7948E;
+    box-shadow: none;
+    width: 20vw;
+    padding: 3vw;
+    font-family: url(/assets/font/static/Montserrat-Regular.ttf);
+    font-weight: 100;
+    color: #FBFDF7;
+    font-size: 18px;
+    border-style: none;
+    border-radius: 10%;
+    filter: drop-shadow(1px 1px 3px rgba(0,0,0,0.25));
+}
+
+
