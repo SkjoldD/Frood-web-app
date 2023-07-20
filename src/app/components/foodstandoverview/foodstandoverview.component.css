@@ -94,6 +94,7 @@
 .mat-mdc-raised-button.mat-accent {
     --mdc-protected-button-container-color: #E7948E;
     --mdc-protected-button-label-text-color: #FBFDF7;
+    z-index: 0;
 }
 
 .button-popup {      
@@ -175,5 +176,6 @@
     border-radius: 10%;
     filter: drop-shadow(1px 1px 3px rgba(0,0,0,0.25));
 }
+
 
 
