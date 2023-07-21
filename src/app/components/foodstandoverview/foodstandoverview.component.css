@@ -11,6 +11,8 @@
     max-width: 80%;
     background-color: #FBFDF7;
     padding: 5vw;
+    animation: fadein 1s linear 1 forwards;
+
 }
 
 .font-description-italic {
@@ -55,16 +57,18 @@
 }
 
 .growntype-container-images{
+    height: 30%;
+    width: auto;
     display: flex;
     justify-content: center;
-    margin-top: min(-34vh); 
+    margin-top: min(-35vh); 
     margin-left: auto;
     margin-right: auto;
 }
 
 .growntype-image{
-   height: auto;
-   width: 80%;
+   height: 80%;
+   width: auto;
 }
 
 .location-font-medium-text{
@@ -103,7 +107,8 @@
 }
 
 .overlay {
-    position:fixed;top: 0;
+    position:fixed;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
@@ -119,7 +124,7 @@
     background: #FBFDF7;
     border-radius: 10px;
     width: 30%;
-    position: relative;
+    position: fixed;
     transition: all 5s ease-in-out;
 }
 
@@ -175,6 +180,11 @@
     border-style: none;
     border-radius: 10%;
     filter: drop-shadow(1px 1px 3px rgba(0,0,0,0.25));
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 

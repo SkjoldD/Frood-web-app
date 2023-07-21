@@ -12,13 +12,6 @@ interface Food {
   name: string;
 }
 
-interface MarkerProperties {
-  position: {
-    lat: number;
-    lng: number;
-  }
-};
-
 @Component({
   selector: 'app-sellfood',
   templateUrl: './sellfood.component.html',
@@ -26,7 +19,7 @@ interface MarkerProperties {
 })
 
 
-export class SellfoodComponent implements OnInit {
+export class SellfoodComponent {
   foodControl = new FormControl<Food | null>(null, Validators.required);
 
 
@@ -88,8 +81,7 @@ export class SellfoodComponent implements OnInit {
 
     return this.allTags.filter(tag => tag.toLowerCase().includes(filterValue));
   }
-
-
+  
   foods: Food[] = [
     {name: 'Æble'},
     {name: 'Pære'},
@@ -101,46 +93,6 @@ export class SellfoodComponent implements OnInit {
     {name: 'Kartofler'},
   ];
 
-  zoom = 12;
-    center: google.maps.LatLngLiteral  = {lat: 55.6638295, lng: 12.5414299};
-
-    markers: MarkerProperties[] = [
-      { position: { lat: 48.8584, lng: 2.2945 }}, // Eiffel Tower
-    ];
-
-    options: google.maps.MapOptions = {
-      zoomControl: false,
-      scrollwheel: true,
-      disableDoubleClickZoom: true,
-      maxZoom: 24,
-      minZoom: 4,
-      disableDefaultUI: true
-    };
-
-    ngOnInit() {
-      
-      return this.geogeo();
-    }
-
-    geogeo(){
-      navigator.geolocation.getCurrentPosition((position) => {
-
-        this.center = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude,
-        };
-        
-        this.markers.push({ position: { lat: this.center.lat, lng: this.center.lng }})
-
-      }, function (e) {
-        //Your error handling here
-        console.log("Enable location");
-      }, {
-          timeout: 2000,
-          enableHighAccuracy: true
-      });
-    }
-    
     constructor(private _router: Router) {
       this.filteredTags = this.tagCtrl.valueChanges.pipe(
         startWith(null),
@@ -152,12 +104,6 @@ export class SellfoodComponent implements OnInit {
     }
     sharefoodButtonClick(){
       this._router.navigate(['startingpage'])
-    }
-    
-    useMyAddress: boolean=false;
-    UseMyAddress(){
-      this.useMyAddress=!this.useMyAddress;
-      console.log(this.useMyAddress);
     }
     
 }

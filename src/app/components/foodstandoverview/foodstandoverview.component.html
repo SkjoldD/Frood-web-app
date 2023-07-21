@@ -13,20 +13,9 @@
                 <img class="foodstand-image" src="assets/icons/foodstandanimation.png" alt="">
           
                 
-                <button class="button-popup"(click)="popup = true">
-                    <img class="delete-image" src="assets/icons/trashcan-image.png" alt="">
+                    <img class="delete-image" src="assets/icons/trashcan-image.png" alt="" (click)="DeleteFoodstand(foodstand)">
 
-                </button>
-
-                <div class="overlay" *ngIf="popup">
-                    <div class="popup">
-                        <h2>Er du sikker på at du vil slette madboden?</h2>
-                        <div class="content">
-                        <button class="button-inside-popup">Ja</button>
-                        <button class="button-inside-popup" (click)="popup = false">Nej</button>
-                        </div>
-                    </div>
-                </div>
+                
                 <img class="edit-image" src="assets/icons/edit-image.png" alt="">
                 <div class="growntype-container-images">
                     <div *ngFor="let product of foodstand.productsFoodGrown | slice:0:2">

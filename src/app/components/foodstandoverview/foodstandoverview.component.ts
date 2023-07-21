@@ -18,6 +18,13 @@ export class FoodstandoverviewComponent {
   
   foodstands! : Foodstand[];
 
+  DeleteFoodstand(foodstand : Foodstand){
+    const index = this.foodstands.indexOf(foodstand, 0);
+    if (index > -1) {
+    this.foodstands.splice(index, 1);
+    } 
+  }
+
   constructor(private _router: Router, private _grownTypeHelperService : GrowntypeHelperServiceService, private _foodstandService:FoodstandService, private _selectedFoodstandService : SelectedFoodstandService){
   this.foodstands = _foodstandService.read_all();
   }

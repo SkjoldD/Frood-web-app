@@ -16,41 +16,13 @@
         <mat-form-field class="input-field">
             <mat-label>Antal</mat-label>
             <input matInput placeholder="kg. eller stk." value="">
-        </mat-form-field>
-    
-        <div class="font-medium-headlines"> Hvor kan det findes? </div>
-        <div class="input-field"> 
-            <section class="sellfood-text"> Brug min placering
-                <mat-checkbox class="checkbox-margin" (change)="UseMyAddress()"></mat-checkbox>
-                
-            </section>
-        </div>
+        </mat-form-field> 
     </div> 
     
-    <div *ngIf="useMyAddress==false" class="map-view">
-        <google-map 
-            height="25vh" 
-            width="90%" 
-            [zoom]="zoom" 
-            [center]="center" 
-            [options]="options">
-            <map-marker *ngFor="let marker of markers"
-            [position]="marker.position"></map-marker>
-        </google-map>
-    </div>
-    
     <div class="sellfood-input-container">
-        <div class="input-field">
-            <div class="sellfood-text">Mobilepay <mat-slide-toggle class="toggle-placing"></mat-slide-toggle>
+            <div class="sellfood-text input-field">Gratis <mat-slide-toggle class="toggle-placing"></mat-slide-toggle>
             </div>
-            <div class="sellfood-text">Kontant <mat-slide-toggle class="toggle-placing"></mat-slide-toggle>
-            </div>
-            <div class="sellfood-text">Vis mobil nr. <mat-slide-toggle class="toggle-placing"></mat-slide-toggle>
-            </div>
-            <div class="sellfood-text">Gratis <mat-slide-toggle class="toggle-placing"></mat-slide-toggle>
-            </div>
-        </div>
-    
+            
         <div class="font-medium-headlines"> Annonce udløber efter</div>
         
             <mat-radio-group class="radiobutton-hours-text radiobutton-container" aria-label="Select an option">
