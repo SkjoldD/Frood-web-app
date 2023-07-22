@@ -1,91 +1,132 @@
 <div class="complete-view">
-    <app-header [title]="'Sælg mad'"></app-header>
-    <div class="sellfood-input-container">
-    
-        <mat-form-field class="input-field">
-            <mat-label>Æble, pære</mat-label>
-            <mat-select [formControl]="foodControl" required>
-                <mat-option>--</mat-option>
-                <mat-option *ngFor="let food of foods" [value]="food">
-                {{food.name}}
-                </mat-option>
-            </mat-select>
-            <mat-error *ngIf="foodControl.hasError('required')">Vælg en vare</mat-error>
-        </mat-form-field>
+  <app-header [title]="'Sælg mad'"></app-header>
+  <div class="sellfood-input-container">
 
-        <mat-form-field class="input-field">
-            <mat-label>Antal</mat-label>
-            <input matInput placeholder="kg. eller stk." value="">
-        </mat-form-field> 
-    </div> 
-    
-    <div class="sellfood-input-container">
-            <div class="sellfood-text input-field">Gratis <mat-slide-toggle class="toggle-placing"></mat-slide-toggle>
-            </div>
-            
-        <div class="font-medium-headlines"> Annonce udløber efter</div>
-        
-            <mat-radio-group class="radiobutton-hours-text radiobutton-container" aria-label="Select an option">
-                
-                <div class="radiobutton-container-element">
-                    <div class="radiobutton-container-text">24 t</div>
-                    <mat-radio-button value="1" ></mat-radio-button>
-                </div>
-                
-                <div class="radiobutton-container-element">
-                    <div class="radiobutton-container-text">48 t</div>
-                    <mat-radio-button value="2"></mat-radio-button>
-                </div>
+    <mat-form-field class="input-field">
+      <mat-label>
+        Æble, pære
+      </mat-label>
+      <mat-select [(value)]="sellProductFoodGrown.grownType" [formControl]="foodControl" required>
+        <mat-option>--</mat-option>
+        <mat-option *ngFor="let food of grownTypes | keyvalue" [value]="food.value">
+           {{food.value}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="foodControl.hasError('required')">'
+        Vælg en vare
+      </mat-error>
+    </mat-form-field>
 
-                <div class="radiobutton-container-element">
-                    <div class="radiobutton-container-text">72 t</div>
-                    <mat-radio-button value="3"></mat-radio-button>
-                </div>
+    <mat-form-field class="input-field">
+      <mat-label>
+        Antal
+      </mat-label>
+      <input type="number" matInput placeholder="" [(ngModel)]="sellProductFoodGrown.amount">
+    </mat-form-field>
 
-                <div class="radiobutton-container-element">
-                    <div class="radiobutton-container-text">1 u</div>
-                    <mat-radio-button value="4"></mat-radio-button>
-                </div>
-            </mat-radio-group>
+    <mat-radio-group class="radiobutton-hours-text radiobutton-container" aria-label="Select an option" [(ngModel)]="sellProductFoodGrown.unit">
+
+      <div class="radiobutton-container-element" *ngFor="let unit of unitTypes | keyvalue">
+        <div class="radiobutton-container-text">
+          {{unit.value}}
+        </div>
+        <mat-radio-button [value]="unit.value"></mat-radio-button>
+      </div>
+      
+    </mat-radio-group>
+
+    <div class="sellfood-text input-field">
+      Gratis
+      <mat-slide-toggle class="toggle-placing" (change)="toggleFree($event)"></mat-slide-toggle>
+    </div>
+
+    <mat-form-field *ngIf="showPriceField" class="input-field">
+      <mat-label>
+        Pris
+      </mat-label>
+      <input type="number" matInput placeholder="DKK" [(ngModel)]="sellProductFoodGrown.price">
+    </mat-form-field>
+
+    <div class="font-medium-headlines">
+      Annonce udløber efter
+    </div>
+
+    <mat-radio-group class="radiobutton-hours-text radiobutton-container" aria-label="Select an option" [(ngModel)]="selectedEndofactivetime">
+
+      <div class="radiobutton-container-element">
+        <div class="radiobutton-container-text">
+          24 t
+        </div>
+        <mat-radio-button value="24" (change)="radioChange($event)"></mat-radio-button>
+      </div>
+
+      <div class="radiobutton-container-element">
+        <div class="radiobutton-container-text">
+          48 t
+        </div>
+        <mat-radio-button value="48" (change)="radioChange($event)"></mat-radio-button>
+      </div>
+
+      <div class="radiobutton-container-element">
+        <div class="radiobutton-container-text">
+          72 t
+        </div>
+        <mat-radio-button value="72" (change)="radioChange($event)"></mat-radio-button>
+      </div>
+
+      <div class="radiobutton-container-element">
+        <div class="radiobutton-container-text">
+          1 u
+        </div>
+        <mat-radio-button value="168" (change)="radioChange($event)"></mat-radio-button>
+      </div>
+    </mat-radio-group>
 
     <div class="input-field">
-        <div class="sharefood-buttonarea">
-                <button mat-raised-button color="accent" 
-            (click)="uploadimageButtonClick()">Upload billede</button>
-        </div>
-        <mat-form-field class="input-field">
-            <mat-label>Kommentarer</mat-label>
-            <textarea matInput></textarea>
-        </mat-form-field>
-        
-        <form>
-            <mat-form-field class="input-field">
-              <mat-label>Tags</mat-label>
-              <mat-chip-grid #chipGrid aria-label="Tag selection">
-                <mat-chip-row *ngFor="let tag of tags"(removed)="remove(tag)">
-                  {{tag}}
-                  <button matChipRemove [attr.aria-label]="'remove ' + tag">
-                    <mat-icon>cancel</mat-icon>
-                  </button>
-                </mat-chip-row>
-              </mat-chip-grid>
-              <input placeholder="Gør så det er nemmere at filtrere" #tagInput [formControl]="tagCtrl"
-                [matChipInputFor]="chipGrid" [matAutocomplete]="auto"
-                [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-                (matChipInputTokenEnd)="add($event)"/>
-              <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
-                <mat-option *ngFor="let tag of filteredTags | async" [value]="tag">
-                  {{tag}}
-                </mat-option>
-              </mat-autocomplete>
-            </mat-form-field>
-          </form>
+      <div class="sharefood-buttonarea">
+        <button mat-raised-button color="accent" (click)="uploadimageButtonClick()">
+          Upload billede
+        </button>
+      </div>
+      <mat-form-field class="input-field" >
+        <mat-label>
+          Kommentarer
+        </mat-label>
+        <textarea matInput [(ngModel)]="sellProductFoodGrown.comment"></textarea>
+      </mat-form-field>
 
-        
-            <div class="sharefood-buttonarea">
-                <button mat-raised-button color="accent" 
-                (click)="sharefoodButtonClick()">Del mad</button>
-            </div>
-        </div>
+      <form>
+        <mat-form-field class="input-field" >
+          <mat-label>
+            Tags
+          </mat-label>
+          <mat-chip-grid #chipGrid aria-label="Tag selection">
+            <mat-chip-row *ngFor="let tag of sellProductFoodGrown.tags" (removed)="remove(tag)">
+              {{tag}}
+              <button matChipRemove [attr.aria-label]="'remove ' + tag">
+                <mat-icon> 
+                  cancel
+                </mat-icon>
+              </button>
+            </mat-chip-row>
+          </mat-chip-grid>
+          <input placeholder="Gør så det er nemmere at filtrere" #tagInput [formControl]="tagCtrl"
+            [matChipInputFor]="chipGrid" [matAutocomplete]="auto" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+            />
+          <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)" value="">
+            <mat-option *ngFor="let tag of filteredTags | async" [value]="tag">
+              {{tag}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
+
+
+      <div class="sharefood-buttonarea">
+        <button mat-raised-button color="accent" (click)="sharefoodButtonClick()">
+          Del mad
+        </button>
+      </div>
     </div>
+  </div>
 </div>

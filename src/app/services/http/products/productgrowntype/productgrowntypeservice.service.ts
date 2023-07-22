@@ -20,11 +20,11 @@ export class ProductgrowntypeserviceService {
 
   read_all()
   { 
-    this.productGrownItem1 = new ProductFoodGrown(-1,GrownType.Carrot,"10 Kg",1);
-    this.productGrownItem2 = new ProductFoodGrown(-1,GrownType.Pear,"5 Kg",9);
-    this.productGrownItem3 = new ProductFoodGrown(-1,GrownType.Potato,"17 Kg",10);
-    this.productGrownItem4 = new ProductFoodGrown(-1,GrownType.Strawberry,"1 Bakke", 0);
-    this.productGrownItem5 = new ProductFoodGrown(-1,GrownType.Potato,"123123 Kg",3);
+    this.productGrownItem1 = new ProductFoodGrown(-1,GrownType.Carrot,10,1);
+    this.productGrownItem2 = new ProductFoodGrown(-1,GrownType.Pear,5,9);
+    this.productGrownItem3 = new ProductFoodGrown(-1,GrownType.Potato,17,10);
+    this.productGrownItem4 = new ProductFoodGrown(-1,GrownType.Strawberry,1, 0);
+    this.productGrownItem5 = new ProductFoodGrown(-1,GrownType.Potato,123123,3);
 
     this.productGrownItems.push(this.productGrownItem1);
     this.productGrownItems.push(this.productGrownItem2);

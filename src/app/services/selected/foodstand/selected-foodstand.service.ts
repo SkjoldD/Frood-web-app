@@ -17,8 +17,13 @@ export class SelectedFoodstandService {
 
   }
 
+
   SetFoodstand(newFoodstand : Foodstand){
     this.selectedFoodstand.next(newFoodstand);
+  }
+
+  AddToFoodstand(product : ProductFoodGrown){
+      this.selectedFoodstand.value.productsFoodGrown.push(product);
   }
   
 

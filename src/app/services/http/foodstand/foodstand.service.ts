@@ -14,17 +14,17 @@ export class FoodstandService {
   constructor() {
     const productGrownItems = [];
 
-    const productGrownItem1 = new ProductFoodGrown(-1,GrownType.Carrot,"10 Kg",1);
-    const productGrownItem2 = new ProductFoodGrown(-1,GrownType.Pear,"5 Kg",9);
-    const productGrownItem3 = new ProductFoodGrown(-1,GrownType.Potato,"17 Kg",10);
-    const productGrownItem4 = new ProductFoodGrown(-1,GrownType.Strawberry,"1 Bakke", 0);
-    const productGrownItem5 = new ProductFoodGrown(-1,GrownType.Potato,"123123 Kg",3);
-    const productGrownItem6 = new ProductFoodGrown(-1,GrownType.Potato,"123123 Kg",3);
-    const productGrownItem7 = new ProductFoodGrown(-1,GrownType.Potato,"123123 Kg",3);
-    const productGrownItem8 = new ProductFoodGrown(-1,GrownType.Potato,"123123 Kg",3);
-    const productGrownItem9 = new ProductFoodGrown(-1,GrownType.Potato,"123123 Kg",3);
-    const productGrownItem10 = new ProductFoodGrown(-1,GrownType.Potato,"123123 Kg",3);
-    const productGrownItem11 = new ProductFoodGrown(-1,GrownType.Potato,"123123 Kg",3);
+    const productGrownItem1 = new ProductFoodGrown(-1,GrownType.Carrot,10);
+    const productGrownItem2 = new ProductFoodGrown(-1,GrownType.Pear,5, 12);
+    const productGrownItem3 = new ProductFoodGrown(-1,GrownType.Potato,17, 10);
+    const productGrownItem4 = new ProductFoodGrown(-1,GrownType.Strawberry,1, 0);
+    const productGrownItem5 = new ProductFoodGrown(-1,GrownType.Potato,12,3);
+    const productGrownItem6 = new ProductFoodGrown(-1,GrownType.Potato,6,3);
+    const productGrownItem7 = new ProductFoodGrown(-1,GrownType.Potato,0,3);
+    const productGrownItem8 = new ProductFoodGrown(-1,GrownType.Potato,123,3);
+    const productGrownItem9 = new ProductFoodGrown(-1,GrownType.Potato,123123123,3);
+    const productGrownItem10 = new ProductFoodGrown(-1,GrownType.Potato,14,3);
+    const productGrownItem11 = new ProductFoodGrown(-1,GrownType.Potato,13,3);
 
     productGrownItems.push(productGrownItem1);
     productGrownItems.push(productGrownItem2);
@@ -45,11 +45,11 @@ export class FoodstandService {
 
     const productGrownItemsB = [];
 
-    const productGrownItemB1 = new ProductFoodGrown(-1,GrownType.Pear,"10 Kg",1);
-    const productGrownItemB2 = new ProductFoodGrown(-1,GrownType.Pear,"5 Kg",9);
-    const productGrownItemB3 = new ProductFoodGrown(-1,GrownType.Pear,"17 Kg",10);
-    const productGrownItemB4 = new ProductFoodGrown(-1,GrownType.Pear,"1 Bakke", 0);
-    const productGrownItemB5 = new ProductFoodGrown(-1,GrownType.Potato,"123123 Kg",3);
+    const productGrownItemB1 = new ProductFoodGrown(-1,GrownType.Pear,10,1);
+    const productGrownItemB2 = new ProductFoodGrown(-1,GrownType.Pear,5 ,9);
+    const productGrownItemB3 = new ProductFoodGrown(-1,GrownType.Pear,17,10);
+    const productGrownItemB4 = new ProductFoodGrown(-1,GrownType.Pear,1, 0);
+    const productGrownItemB5 = new ProductFoodGrown(-1,GrownType.Potato,133,3);
 
     productGrownItemsB.push(productGrownItemB1);
     productGrownItemsB.push(productGrownItemB2);
@@ -63,11 +63,11 @@ export class FoodstandService {
 
     const productGrownItemsC = [];
 
-    const productGrownItemC1 = new ProductFoodGrown(-1,GrownType.Potato,"10 Kg",1);
-    const productGrownItemC2 = new ProductFoodGrown(-1,GrownType.Potato,"5 Kg",9);
-    const productGrownItemC3 = new ProductFoodGrown(-1,GrownType.Potato,"17 Kg",10);
-    const productGrownItemC4 = new ProductFoodGrown(-1,GrownType.Potato,"1 Bakke", 0);
-    const productGrownItemC5 = new ProductFoodGrown(-1,GrownType.Potato,"123123 Kg",3);
+    const productGrownItemC1 = new ProductFoodGrown(-1,GrownType.Potato,10,1);
+    const productGrownItemC2 = new ProductFoodGrown(-1,GrownType.Potato,5,9);
+    const productGrownItemC3 = new ProductFoodGrown(-1,GrownType.Potato,17,10);
+    const productGrownItemC4 = new ProductFoodGrown(-1,GrownType.Potato,1 , 0);
+    const productGrownItemC5 = new ProductFoodGrown(-1,GrownType.Potato,1231,3);
 
     productGrownItemsC.push(productGrownItemC1);
     productGrownItemsC.push(productGrownItemC2);

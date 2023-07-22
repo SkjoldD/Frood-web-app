@@ -1,9 +1,9 @@
 export enum GrownType {
-    Potato,
-    Carrot,
-    Strawberry,
-    Cherry,
-    Pear,
-    Apple,
+    Potato = "Kartoffel",
+    Carrot = "Gulerod",
+    Strawberry = "Jordbær",
+    Cherry = "Kirsebær",
+    Pear = "Pære",
+    Apple = "Æble",
 
 }
