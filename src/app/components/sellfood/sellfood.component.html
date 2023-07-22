@@ -51,36 +51,15 @@
       Annonce udløber efter
     </div>
 
-    <mat-radio-group class="radiobutton-hours-text radiobutton-container" aria-label="Select an option" [(ngModel)]="selectedEndofactivetime">
+    <mat-radio-group class="radiobutton-hours-text radiobutton-container" aria-label="Select an option">
 
-      <div class="radiobutton-container-element">
+      <div class="radiobutton-container-element" *ngFor="let endofactivetime of timeUnits">
         <div class="radiobutton-container-text">
-          24 t
+          {{endofactivetime | hoursdayTransformer}}
         </div>
-        <mat-radio-button value="24" (change)="radioChange($event)"></mat-radio-button>
+        <mat-radio-button [value]="endofactivetime" (change)="radioChange($event)"></mat-radio-button>
       </div>
-
-      <div class="radiobutton-container-element">
-        <div class="radiobutton-container-text">
-          48 t
-        </div>
-        <mat-radio-button value="48" (change)="radioChange($event)"></mat-radio-button>
-      </div>
-
-      <div class="radiobutton-container-element">
-        <div class="radiobutton-container-text">
-          72 t
-        </div>
-        <mat-radio-button value="72" (change)="radioChange($event)"></mat-radio-button>
-      </div>
-
-      <div class="radiobutton-container-element">
-        <div class="radiobutton-container-text">
-          1 u
-        </div>
-        <mat-radio-button value="168" (change)="radioChange($event)"></mat-radio-button>
-      </div>
-    </mat-radio-group>
+      </mat-radio-group>
 
     <div class="input-field">
       <div class="sharefood-buttonarea">

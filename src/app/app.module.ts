@@ -43,11 +43,13 @@ import { FoodstandProductGrownItemSoldoutComponent } from './components/foodstan
 import {MatRadioModule} from '@angular/material/radio';
 import { FoodstandoverviewComponent } from './components/foodstandoverview/foodstandoverview.component';
 import { CreatefoodstandComponent } from './components/foodstandoverview/createfoodstand/createfoodstand.component';
+import { HoursdayTransformerPipe } from './pipes/hoursday-transformer.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    HoursdayTransformerPipe,
     HomepageComponent,
     ProfileHomeComponent,
     ErrorComponentComponent,
@@ -63,7 +65,7 @@ import { CreatefoodstandComponent } from './components/foodstandoverview/createf
     HeaderWithLogoComponent,
     FoodstandProductGrownItemSoldoutComponent,
     FoodstandoverviewComponent,
-    CreatefoodstandComponent
+    CreatefoodstandComponent,
   ],
   imports: [
     BrowserModule,
@@ -90,7 +92,7 @@ import { CreatefoodstandComponent } from './components/foodstandoverview/createf
 
     GoogleMapsModule
   ],
-  providers: [],
+  providers: [HoursdayTransformerPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

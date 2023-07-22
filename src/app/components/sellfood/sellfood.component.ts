@@ -13,6 +13,8 @@ import { ProductFoodGrown } from 'src/app/classes/product-food-grown';
 import { GrownType } from 'src/app/classes/enums/growntype';
 import { SelectedFoodstandService } from 'src/app/services/selected/foodstand/selected-foodstand.service';
 import { ProductUnitTypes } from 'src/app/classes/enums/product-unit-types';
+import { Endofactivetime } from 'src/app/classes/enums/endofactivetime';
+import { HoursdayTransformerPipe } from 'src/app/pipes/hoursday-transformer.pipe';
 
 interface Food {
   name: string;
@@ -30,6 +32,7 @@ export class SellfoodComponent {
   
   grownTypes = GrownType;
   unitTypes = ProductUnitTypes;
+  timeUnits = Object.values(Endofactivetime);
 
   foodControl = new FormControl<Food | null>(null, Validators.required);
   showPriceField : boolean = true;
@@ -145,9 +148,9 @@ export class SellfoodComponent {
      radioChange(event: MatRadioChange){
       
       let currentDate = new Date();
-      let addedHours = event.value;
+      let addedHours = Number(event.value);
 
-      currentDate.setHours(currentDate.getHours() + Number(addedHours));
+      currentDate.setHours(currentDate.getHours() + addedHours);
 
       this.sellProductFoodGrown.endofactivetime = currentDate;
 
