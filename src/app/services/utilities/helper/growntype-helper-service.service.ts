@@ -29,6 +29,10 @@ export class GrowntypeHelperServiceService {
     if (_grownType == GrownType.Apple){
       return "assets/food-animations/apple-basket.png";
     }
+    
+    if (_grownType == GrownType.Cherry){
+      return "assets/food-animations/cherry-basket.png";
+    }
 
     return "Nothing found"
 
@@ -64,6 +68,10 @@ export class GrowntypeHelperServiceService {
   
   if (_grownType == GrownType.Strawberry){
     return "assets/food-animations/strawberries-single.png";
+  }
+  
+  if (_grownType == GrownType.Cherry){
+    return "assets/food-animations/cherries-single.png";
   }
   
   if (_grownType == GrownType.Potato){

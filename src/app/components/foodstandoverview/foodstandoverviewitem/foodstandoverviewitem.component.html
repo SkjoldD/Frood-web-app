@@ -1,0 +1,37 @@
+<div class="container-foodstands">
+    <div class="font-medium-headlines">{{foodstand.name | slice: 0:18 }}{{foodstand.name.length > 18 ? '...' : ''}}
+    </div>
+    <div class="font-description-italic">{{foodstand.description | slice: 0:40 }}{{foodstand.description.length > 40 ?
+        '...'
+        : ''}}
+    </div>
+
+    <div class="foodstand-container input-field">
+        <img class="foodstand-image" src="assets/icons/foodstandanimation.png" alt="">
+        
+        <img class="delete-image" src="assets/icons/trashcan-image.png" alt="" (click)="DeleteFoodstand()">
+
+        <img class="edit-image" src="assets/icons/edit-image.png" alt="">
+        <div class="growntype-container-images">
+            <div *ngFor="let product of foodstand.productsFoodGrown | slice:0:2">
+                <img class="growntype-image" [src]="GetRelatedImage(product)">
+            </div>
+            <div class="font-plus" *ngIf="foodstand.productsFoodGrown.length > 2"> + </div>
+        </div>
+    </div>
+
+    <div class="location-font-medium-text">
+        {{foodstand.location.streetName}}
+        {{foodstand.location.streetNumber}},
+        <br>
+        {{foodstand.location.zipCode}}
+        {{foodstand.location.city}}
+    </div>
+
+    <div class="buttonarea">
+        <button mat-raised-button color="accent" (click)="FoodstandButtonClick(foodstand)">Se madbod</button>
+    </div>
+</div>
+<app-modal [id]="foodstand.name"> 
+    <app-popup-delete [(foodstands)]="foodstands" [foodstand]="foodstand"></app-popup-delete>
+</app-modal>

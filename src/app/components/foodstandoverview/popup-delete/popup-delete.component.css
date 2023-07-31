@@ -1,0 +1,32 @@
+.font-medium-popup{
+    font-family: url(/assets/font/static/Montserrat-Regular.ttf);
+    font-weight: 100;
+    color: #E7948E;
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.deleteicon{
+    padding-top: 7vh;
+    align-items: center;  
+}
+
+.buttonarea{
+    display:flex;
+    justify-content: space-around;
+}
+
+.mdc-button {
+    min-width: 35vw;
+    max-width: 80vw;
+}
+
+.mat-mdc-raised-button.mat-accent {
+    --mdc-protected-button-container-color: #E7948E;
+    --mdc-protected-button-label-text-color: #FBFDF7;
+    z-index: 0;
+}

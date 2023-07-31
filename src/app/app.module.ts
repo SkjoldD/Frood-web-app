@@ -44,6 +44,9 @@ import {MatRadioModule} from '@angular/material/radio';
 import { FoodstandoverviewComponent } from './components/foodstandoverview/foodstandoverview.component';
 import { CreatefoodstandComponent } from './components/foodstandoverview/createfoodstand/createfoodstand.component';
 import { HoursdayTransformerPipe } from './pipes/hoursday-transformer.pipe';
+import { ModalComponent } from './components/modal/modal.component';
+import { FoodstandoverviewitemComponent } from './components/foodstandoverview/foodstandoverviewitem/foodstandoverviewitem.component';
+import { PopupDeleteComponent } from './components/foodstandoverview/popup-delete/popup-delete.component';
 
 
 @NgModule({
@@ -66,6 +69,9 @@ import { HoursdayTransformerPipe } from './pipes/hoursday-transformer.pipe';
     FoodstandProductGrownItemSoldoutComponent,
     FoodstandoverviewComponent,
     CreatefoodstandComponent,
+    ModalComponent,
+    FoodstandoverviewitemComponent,
+    PopupDeleteComponent,
   ],
   imports: [
     BrowserModule,
