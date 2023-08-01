@@ -9,7 +9,7 @@
       <mat-select [(value)]="sellProductFoodGrown.grownType" [formControl]="foodControl" required>
         <mat-option>--</mat-option>
         <mat-option *ngFor="let food of grownTypes | keyvalue" [value]="food.value">
-           {{food.value}}
+          {{food.value}}
         </mat-option>
       </mat-select>
       <mat-error *ngIf="foodControl.hasError('required')">'
@@ -24,7 +24,8 @@
       <input type="number" matInput placeholder="" [(ngModel)]="sellProductFoodGrown.amount">
     </mat-form-field>
 
-    <mat-radio-group class="radiobutton-hours-text radiobutton-container" aria-label="Select an option" [(ngModel)]="sellProductFoodGrown.unit">
+    <mat-radio-group class="radiobutton-hours-text radiobutton-container" aria-label="Select an option"
+      [(ngModel)]="sellProductFoodGrown.unit">
 
       <div class="radiobutton-container-element" *ngFor="let unit of unitTypes | keyvalue">
         <div class="radiobutton-container-text">
@@ -32,7 +33,7 @@
         </div>
         <mat-radio-button [value]="unit.value"></mat-radio-button>
       </div>
-      
+
     </mat-radio-group>
 
     <div class="sellfood-text input-field">
@@ -59,7 +60,7 @@
         </div>
         <mat-radio-button [value]="endofactivetime" (change)="radioChange($event)"></mat-radio-button>
       </div>
-      </mat-radio-group>
+    </mat-radio-group>
 
     <div class="input-field">
       <div class="sharefood-buttonarea">
@@ -67,7 +68,7 @@
           Upload billede
         </button>
       </div>
-      <mat-form-field class="input-field" >
+      <mat-form-field class="input-field">
         <mat-label>
           Kommentarer
         </mat-label>
@@ -75,7 +76,7 @@
       </mat-form-field>
 
       <form>
-        <mat-form-field class="input-field" >
+        <mat-form-field class="input-field">
           <mat-label>
             Tags
           </mat-label>
@@ -83,15 +84,15 @@
             <mat-chip-row *ngFor="let tag of sellProductFoodGrown.tags" (removed)="remove(tag)">
               {{tag}}
               <button matChipRemove [attr.aria-label]="'remove ' + tag">
-                <mat-icon> 
+                <mat-icon>
                   cancel
                 </mat-icon>
               </button>
             </mat-chip-row>
           </mat-chip-grid>
           <input placeholder="Gør så det er nemmere at filtrere" #tagInput [formControl]="tagCtrl"
-            [matChipInputFor]="chipGrid" [matAutocomplete]="auto" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-            />
+            [matChipInputFor]="chipGrid" [matAutocomplete]="auto"
+            [matChipInputSeparatorKeyCodes]="separatorKeysCodes" />
           <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)" value="">
             <mat-option *ngFor="let tag of filteredTags | async" [value]="tag">
               {{tag}}

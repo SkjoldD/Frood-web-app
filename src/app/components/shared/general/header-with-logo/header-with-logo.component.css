@@ -9,9 +9,9 @@
     width: 100%;
     background-size: contain;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.20));
-}  
+}
 
-.coiny-style-frood{   
+.coiny-style-frood {
     color: #B6D9C9;
     font-family: Coiny;
     font-size: 60px;
@@ -22,14 +22,15 @@
     -webkit-text-stroke-color: #FBFDF7;
     -webkit-text-stroke-width: 2px;
     text-align: center;
-    margin-bottom: min(2vh, 80px); /* IMPORATANT, IF CHANGES OCCUR IN WINDOW MARGIN, ADD HERE. REGULAR IS -15. ADD ON THE MARGIN FROM WINDOW*/
+    margin-bottom: min(2vh, 80px);
+    /* IMPORATANT, IF CHANGES OCCUR IN WINDOW MARGIN, ADD HERE. REGULAR IS -15. ADD ON THE MARGIN FROM WINDOW*/
     border: none;
     position: relative;
     border-radius: 50px;
     opacity: 1;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     z-index: 1;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.20));
 

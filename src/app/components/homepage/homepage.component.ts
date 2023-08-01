@@ -9,10 +9,10 @@ import { Router } from '@angular/router';
 export class HomepageComponent {
 
   constructor(private _router: Router) {
-    
+
   }
-  
-  loginButtonClick(){
+
+  loginButtonClick() {
     this._router.navigate(['login'])
   }
 }

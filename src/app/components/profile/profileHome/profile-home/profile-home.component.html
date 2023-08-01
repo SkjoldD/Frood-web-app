@@ -1,12 +1,35 @@
 <div class="complete-view">
     <app-header [title]="'Profil'"></app-header>
-    
-    <img class="profile-settings-icon-placement" src="assets/icons/profile/settings-icon.png"/> 
-    <div class="input-container">  
-        <div class="image-text">
-            <div class="font-medium-headlines-profile" >Hej *navn*</div>
-            <img class="profile-pic" src="assets/pictures/profile-pic-frood.webp"/>      
-        </div>
-    </div>
 
+    <img class="profile-settings-icon-placement" src="assets/icons/profile/settings-icon.png" />
+    <div class="input-container">
+        <div class="image-text">
+            <div class="font-medium-headlines-profile">Hej *navn*</div>
+            <img class="profile-pic" src="assets/pictures/profile-pic-frood.webp" />
+        </div>
+        <div class="font-medium-headlines-profile-bold">Inviter venner</div>
+        <div class="font-description-italic">Henvisningskode</div>
+        <div class="font-medium-headlines-profile">Xvhf9WE</div>
+        
+
+        <mat-form-field class="input-field">
+            <mat-label>Rediger brugernavn</mat-label>
+            <input matInput placeholder="" value="">
+        </mat-form-field>
+
+        <mat-form-field class="input-field">
+            <mat-label>Rediger password</mat-label>
+            <input matInput placeholder="" value="">
+        </mat-form-field>
+        
+        <mat-form-field class="input-field">
+            <mat-label>Bekræft password</mat-label>
+            <input matInput placeholder="" value="">
+        </mat-form-field>
+
+        <div class="button-area">
+            <button mat-raised-button color="accent">Gem ændringer</button>
+        </div>
+
+    </div>
 </div>

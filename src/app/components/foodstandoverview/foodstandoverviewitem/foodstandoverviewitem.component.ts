@@ -14,40 +14,44 @@ import { GrowntypeHelperServiceService } from 'src/app/services/utilities/helper
 })
 
 export class FoodstandoverviewitemComponent implements OnInit {
-  
-  constructor(private _modalserviceservice : ModalServiceService,
-    private _router: Router, 
-    private _grownTypeHelperService : GrowntypeHelperServiceService,
-    private _foodstandService:FoodstandService, 
-    private _selectedFoodstandService : SelectedFoodstandService){
-      
-    }
 
-@Input() foodstand!: Foodstand;
-@Input() foodstands!: Foodstand[];
-@Output() foodstandsChange = new EventEmitter<Foodstand[]>();
+  constructor(private _modalserviceservice: ModalServiceService,
+    private _router: Router,
+    private _grownTypeHelperService: GrowntypeHelperServiceService,
+    private _foodstandService: FoodstandService,
+    private _selectedFoodstandService: SelectedFoodstandService) {
+
+  }
+
+  @Input() foodstand!: Foodstand;
+  @Input() foodstands!: Foodstand[];
+  @Output() foodstandsChange = new EventEmitter<Foodstand[]>();
 
 
-ngOnInit(): void {
- this._modalserviceservice.add(this.foodstand.name);
-}
-  
-  DeleteFoodstand(){
+  ngOnInit(): void {
+    this._modalserviceservice.add(this.foodstand.name);
+  }
+
+  DeleteFoodstand() {
     this._modalserviceservice.open(this.foodstand.name)
     //const index = this.foodstands.indexOf(foodstand, 0);
     //if (index > -1) {
     //this.foodstands.splice(index, 1);
-   // }  
+    // }  
   }
-    
-  GetRelatedImage(grownItem : ProductFoodGrown){
+
+  GetRelatedImage(grownItem: ProductFoodGrown) {
     //return _grownTypeHelperService.G
     return this._grownTypeHelperService.GetProductImage(grownItem.grownType);
-    }
-  
-  FoodstandButtonClick(foodstand: Foodstand){
+  }
+
+  FoodstandButtonClick(foodstand: Foodstand) {
     this._selectedFoodstandService.selectedFoodstand.next(foodstand);
     this._router.navigate(['foodstand'])
   }
- 
+
+  EditfoodstandClick() {
+    this._router.navigate(['createfoodstand'])
+  }
+
 }

@@ -4,7 +4,7 @@ import { Component, ElementRef, OnInit, ViewChild, inject } from '@angular/core'
 import { FormControl, Validators } from '@angular/forms';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { MatChipInputEvent } from '@angular/material/chips';
-import {ThemePalette} from '@angular/material/core';
+import { ThemePalette } from '@angular/material/core';
 import { MatRadioChange } from '@angular/material/radio';
 import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 import { Router } from '@angular/router';
@@ -29,28 +29,28 @@ interface Food {
 
 
 export class SellfoodComponent {
-  
+
   grownTypes = GrownType;
   unitTypes = ProductUnitTypes;
   timeUnits = Object.values(Endofactivetime);
 
   foodControl = new FormControl<Food | null>(null, Validators.required);
-  showPriceField : boolean = true;
+  showPriceField: boolean = true;
 
   selectedEndofactivetime = 24;
 
-  sellProductFoodGrown : ProductFoodGrown = new ProductFoodGrown();
+  sellProductFoodGrown: ProductFoodGrown = new ProductFoodGrown();
 
   selectFormControl = new FormControl('', Validators.required);
   separatorKeysCodes: number[] = [ENTER, COMMA];
   tagCtrl = new FormControl('');
   filteredTags!: Observable<string[]>;
   allTags: string[] = [
-    'Pluk selv', 
-    'Plukket', 
-    'Vasket', 
+    'Pluk selv',
+    'Plukket',
+    'Vasket',
     'Uvasket',
-    'Tæt på offentlig transport', 
+    'Tæt på offentlig transport',
     'Gratis',
     'Altid åben',
     'Hund',
@@ -87,7 +87,7 @@ export class SellfoodComponent {
 
   remove(tag: string): void {
     const index = this.sellProductFoodGrown.tags.indexOf(tag);
-    
+
     if (index >= 0) {
       this.sellProductFoodGrown.tags.splice(index, 1);
 
@@ -99,16 +99,16 @@ export class SellfoodComponent {
 
     this.tagInput.nativeElement.value = '';
     this.tagCtrl.setValue(null);
-    
-    let hasElement = this.sellProductFoodGrown.tags.indexOf(event.option.viewValue);  
-    
 
-    if (hasElement >= 0 ){
+    let hasElement = this.sellProductFoodGrown.tags.indexOf(event.option.viewValue);
+
+
+    if (hasElement >= 0) {
       return;
     }
 
     this.sellProductFoodGrown.tags.push(event.option.viewValue);
-    
+
 
   }
 
@@ -118,51 +118,52 @@ export class SellfoodComponent {
     return this.allTags.filter(tag => tag.toLowerCase().includes(filterValue));
   }
 
-    constructor(private _router: Router, 
-                private selectedFoodstandService : SelectedFoodstandService) {
-      this.filteredTags = this.tagCtrl.valueChanges.pipe(
-        startWith(null),
-        map((tag: string | null) => (tag ? this._filter(tag) : this.allTags.slice())),
-      );
+  constructor(private _router: Router,
+    private selectedFoodstandService: SelectedFoodstandService) {
+    this.filteredTags = this.tagCtrl.valueChanges.pipe(
+      startWith(null),
+      map((tag: string | null) => (tag ? this._filter(tag) : this.allTags.slice())),
+    );
+  }
+  uploadimageButtonClick() {
+    this._router.navigate([''])
+  }
+
+
+  toggleFree(event: MatSlideToggleChange) {
+
+
+    console.log("test");
+
+
+    if (event.checked == true) {
+      this.sellProductFoodGrown.price = 0;
+      this.showPriceField = false;
+
     }
-    uploadimageButtonClick(){
-      this._router.navigate([''])
+    else {
+      this.showPriceField = true;
     }
+  }
 
-        
-    toggleFree(event: MatSlideToggleChange){
-      
-      
-      console.log("test");
+  radioChange(event: MatRadioChange) {
 
+    let currentDate = new Date();
+    let addedHours = Number(event.value);
 
-      if (event.checked == true ){
-        this.sellProductFoodGrown.price = 0;
-        this.showPriceField = false;
+    currentDate.setHours(currentDate.getHours() + addedHours);
 
-      } 
-      else{
-        this.showPriceField = true; } 
-     } 
-     
-     radioChange(event: MatRadioChange){
-      
-      let currentDate = new Date();
-      let addedHours = Number(event.value);
+    this.sellProductFoodGrown.endofactivetime = currentDate;
 
-      currentDate.setHours(currentDate.getHours() + addedHours);
+    console.log(this.sellProductFoodGrown);
+  }
 
-      this.sellProductFoodGrown.endofactivetime = currentDate;
+  sharefoodButtonClick() {
+    console.log(this.sellProductFoodGrown);
+    // Save food
 
-      console.log(this.sellProductFoodGrown);
-     }    
-     
-     sharefoodButtonClick(){
-      console.log(this.sellProductFoodGrown);
-      // Save food
-      
-      this.selectedFoodstandService.AddToFoodstand(this.sellProductFoodGrown);
-      // Navigate to related foodstandspage
-      this._router.navigate(['foodstand']);
-    }
+    this.selectedFoodstandService.AddToFoodstand(this.sellProductFoodGrown);
+    // Navigate to related foodstandspage
+    this._router.navigate(['foodstand']);
+  }
 }

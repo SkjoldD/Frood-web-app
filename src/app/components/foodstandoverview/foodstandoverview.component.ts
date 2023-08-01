@@ -10,13 +10,13 @@ import { FoodstandService } from 'src/app/services/http/foodstand/foodstand.serv
 })
 
 export class FoodstandoverviewComponent {
-  constructor(private _foodstandService:FoodstandService, private _router: Router){
-  this.foodstands = this._foodstandService.read_all();
+  constructor(private _foodstandService: FoodstandService, private _router: Router) {
+    this.foodstands = this._foodstandService.read_all();
   }
-  
-  foodstands! : Foodstand[];
 
-  CreatefoodstandButtonClick(){
+  foodstands!: Foodstand[];
+
+  CreatefoodstandButtonClick() {
     this._router.navigate(['createfoodstand'])
   }
 }

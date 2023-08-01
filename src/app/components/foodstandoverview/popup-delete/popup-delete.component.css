@@ -1,4 +1,4 @@
-.font-medium-popup{
+.font-medium-popup {
     font-family: url(/assets/font/static/Montserrat-Regular.ttf);
     font-weight: 100;
     color: #E7948E;
@@ -10,13 +10,14 @@
     padding-bottom: 5vh;
 }
 
-.deleteicon{
+.deleteicon {
     padding-top: 7vh;
-    align-items: center;  
+    display: flex;
+    margin: auto;
 }
 
-.buttonarea{
-    display:flex;
+.buttonarea {
+    display: flex;
     justify-content: space-around;
 }
 

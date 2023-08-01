@@ -1,12 +1,24 @@
 <div class="complete-view">
-    <app-header [title]="'Find mad'"></app-header>
-    <div class="input-container">
-        <div class="font-headlines">Filtrer oversigt</div>
-        <div>placering - toggle</div>
-        <div>radius - slider</div>
-        <div>pris - slider</div>
-        <div>søg specifikt - drop down menu</div>
-        <div>kort - button</div>
-        <div>listview - button</div>
-    </div>
+  <app-header [title]="'Find mad'"></app-header>
+  <div class="input-container">
+    <div class="font-headlines">Filtrer kort</div>
+
+    <mat-card-content>
+      <div class="example-label-container">
+        <label id="example-name-label" class="font-medium-text">Radius</label>
+        <label class="font-medium-text">{{slider.value}} km</label>
+      </div>
+      <mat-slider class="example-margin" [disabled]="disabled" [max]="max" [min]="min" [step]="step"
+        [discrete]="thumbLabel" [showTickMarks]="showTicks">
+        <input matSliderThumb [(ngModel)]="value" #slider>
+      </mat-slider>
+    </mat-card-content>
+
+    <div>placering - toggle</div>
+    <div>radius - slider</div>
+    <div>pris - slider</div>
+    <div>søg specifikt - drop down menu</div>
+    <div>kort - button</div>
+    <div>listview - button</div>
+  </div>
 </div>

@@ -16,60 +16,60 @@ interface MarkerProperties {
 
 export class StartingpageComponent implements OnInit {
 
-    zoom = 12;
-    center: google.maps.LatLngLiteral  = {lat: 55.6638295, lng: 12.5414299};
+  zoom = 12;
+  center: google.maps.LatLngLiteral = { lat: 55.6638295, lng: 12.5414299 };
 
-    markers: MarkerProperties[] = [
-      { position: { lat: 48.8584, lng: 2.2945 }}, // Eiffel Tower
-    ];
+  markers: MarkerProperties[] = [
+    { position: { lat: 48.8584, lng: 2.2945 } }, // Eiffel Tower
+  ];
 
-    options: google.maps.MapOptions = {
-      zoomControl: false,
-      scrollwheel: true,
-      disableDoubleClickZoom: true,
-      maxZoom: 24,
-      minZoom: 4,
-      disableDefaultUI: true
-    };
+  options: google.maps.MapOptions = {
+    zoomControl: false,
+    scrollwheel: true,
+    disableDoubleClickZoom: true,
+    maxZoom: 24,
+    minZoom: 4,
+    disableDefaultUI: true
+  };
 
-    ngOnInit() {
-      
-      return this.geogeo();
-    }
+  ngOnInit() {
 
-    geogeo(){
+    return this.geogeo();
+  }
+
+  geogeo() {
     navigator.geolocation
-      navigator.geolocation.getCurrentPosition((position) => {
+    navigator.geolocation.getCurrentPosition((position) => {
 
-        this.center = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude,
-        };
-        
-        this.markers.push({ position: { lat: this.center.lat, lng: this.center.lng }})
+      this.center = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
+      };
 
-      }, function (e) {
-        //Your error handling here
-        console.log("Enable location");
-      }, {
-          timeout: 2000,
-          enableHighAccuracy: true
-      });
-    }
-  
+      this.markers.push({ position: { lat: this.center.lat, lng: this.center.lng } })
+
+    }, function (e) {
+      //Your error handling here
+      console.log("Enable location");
+    }, {
+      timeout: 2000,
+      enableHighAccuracy: true
+    });
+  }
+
   constructor(private _router: Router) {
-    
-    }
-    basketiconButtonClick(){
-      this._router.navigate(['foodstandOverview'])
-    }
-    
-    profileiconButtonClick(){
-      this._router.navigate(['profile'])
-    }
 
-    foodstandiconButtonClick(){
-      this._router.navigate(['buyfood'])
-    }
+  }
+  basketiconButtonClick() {
+    this._router.navigate(['foodstandOverview'])
+  }
+
+  profileiconButtonClick() {
+    this._router.navigate(['profile'])
+  }
+
+  foodstandiconButtonClick() {
+    this._router.navigate(['buyfood'])
+  }
 
 }

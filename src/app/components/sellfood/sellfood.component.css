@@ -1,25 +1,25 @@
-.sellfood-input-container{
+.sellfood-input-container {
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     height: 40%;
     max-width: 90%;
     border-radius: 10px;
     padding: 7%;
-} 
+}
 
-.map-view{
+.map-view {
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center; 
-    margin-left: 10vw;   
+    justify-content: center;
+    margin-left: 10vw;
     /*border-radius: 20%;*/
 }
 
-.sellfood-text{
+.sellfood-text {
     font-family: url(/assets/font/static/Montserrat-Regular.ttf);
     font-weight: 100;
     font-size: 20px;
@@ -30,20 +30,20 @@
     padding-bottom: 7%;
 }
 
-.toggle-placing{
+.toggle-placing {
     text-align: right;
 }
 
-.radiobutton-container{
+.radiobutton-container {
     padding-top: 5%;
     padding-bottom: 10%;
-    display: flex; 
-    flex-direction: row; 
+    display: flex;
+    flex-direction: row;
     justify-content: space-around;
     width: 90%;
 }
 
-.radiobutton-hours-text{
+.radiobutton-hours-text {
     font-family: url(/assets/font/static/Montserrat-Regular.ttf);
     font-weight: 100;
     font-size: 20px;
@@ -51,21 +51,21 @@
     flex-wrap: wrap;
 }
 
-.radiobutton-container-element{
+.radiobutton-container-element {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.sharefood-buttonarea{
+.sharefood-buttonarea {
     justify-content: center;
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
-    height: 10vh;    
+    height: 10vh;
 }
 
 .mdc-button {
-    width:250px;
+    width: 250px;
     min-width: 40vw;
     max-width: 80vw;
 }

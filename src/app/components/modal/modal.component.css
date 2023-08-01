@@ -27,19 +27,19 @@
         z-index: 900;
     }
 
-    .popup-color{
+    .popup-color {
         border-radius: 10px;
         background-color: #FBFDF7;
         justify-content: center;
         margin-top: 20%;
         width: auto;
-        height: 70%;
+        height: auto;
         margin-left: 5%;
         margin-right: 5%;
         padding: 5%;
     }
-}  
-  
+}
+
 body.jw-modal-open {
     overflow: hidden;
 }

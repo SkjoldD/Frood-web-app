@@ -1,24 +1,24 @@
-.input-container{
+.input-container {
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     height: 40%;
     background-color: #FBFDF7;
     border-radius: 10px;
 }
 
-.button-area{
+.button-area {
     justify-content: center;
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     height: 10vh;
 }
 
 .mdc-button {
-    width:250px;
+    width: 250px;
     min-width: 40vw;
     max-width: 80vw;
 }
@@ -30,13 +30,13 @@
 
 .dashed-line {
     border: 1% dashed;
-    color:#B6D9C9;
+    color: #B6D9C9;
     background-repeat: repeat-x;
     width: 100%;
     background-size: contain;
-  }
+}
 
-.basket-animations{
+.basket-animations {
     display: flex;
     width: 80%;
     height: 80%;
@@ -44,14 +44,15 @@
     margin-right: auto;
 }
 
-.font-medium-text-vege{
+.font-medium-text-vege {
     font-family: url(/assets/font/static/Montserrat-Regular.ttf);
     font-weight: 100;
     color: #E7948E;
     font-size: 20px;
     text-align: center;
 }
-.font-medium-text-tags{
+
+.font-medium-text-tags {
     font-family: url(/assets/font/static/Montserrat-Regular.ttf);
     font-weight: 100;
     color: #E7948E;

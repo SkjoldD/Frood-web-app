@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
 
-.top-logo{
+.top-logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -10,7 +10,7 @@
     margin-bottom: auto;
 }
 
-.font-headlines{
+.font-headlines {
     font-family: url(/assets/font/static/Montserrat-Regular.ttf);
     font-weight: 100;
     color: #E7948E;
@@ -18,13 +18,13 @@
     text-align: center;
 }
 
-.login-box-container{
+.login-box-container {
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     height: 40%;
     max-width: 80%;
     background-color: #F5ECE9;
@@ -36,24 +36,24 @@ a:link {
     color: #E7948E;
     background-color: transparent;
 }
-  
+
 a:visited {
     color: #E7948E;
 }
 
-.signup-text{
+.signup-text {
     text-align: center;
 }
 
-.buttonarea{
+.buttonarea {
     justify-content: center;
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
-    height: 22vh;    
+    height: 22vh;
 }
 
 .mdc-button {
-    width:250px;
+    width: 250px;
     min-width: 40vw;
     max-width: 80vw;
 }

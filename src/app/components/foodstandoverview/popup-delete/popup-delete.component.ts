@@ -14,22 +14,22 @@ export class PopupDeleteComponent {
   @Output() foodstandsChange = new EventEmitter<Foodstand[]>();
 
 
-  constructor(private _modalserviceservice : ModalServiceService){
+  constructor(private _modalserviceservice: ModalServiceService) {
   }
-  
 
-  DeletefoodstandClick(){
+
+  DeletefoodstandClick() {
     console.log(this.foodstand)
     console.log(this.foodstands)
     this._modalserviceservice.close(this.foodstand.name)
     const index = this.foodstands.indexOf(this.foodstand, 0);
     if (index > -1) {
-    this.foodstands.splice(index, 1);
-  } 
+      this.foodstands.splice(index, 1);
+    }
     console.log("delete")
   }
-  
-  KeepfoodstandClick(){
+
+  KeepfoodstandClick() {
     this._modalserviceservice.close(this.foodstand.name)
     console.log("keep")
   }

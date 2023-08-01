@@ -12,58 +12,56 @@ import { SelectedFoodstandService } from 'src/app/services/selected/foodstand/se
 })
 export class FoodstandComponent {
 
-  public foodstand! : Foodstand;
+  public foodstand!: Foodstand;
 
-  public hasActiveItems : boolean = false;
-  public hasEmptyItems : boolean = false;
+  public hasActiveItems: boolean = false;
+  public hasEmptyItems: boolean = false;
 
-  constructor(private _router: Router, private _selectedFoodstandService : SelectedFoodstandService) {
-    this._selectedFoodstandService.selectedFoodstand.subscribe(val => {this.foodstand = val; console.log(this.foodstand); console.log("test");});
-    
+  constructor(private _router: Router, private _selectedFoodstandService: SelectedFoodstandService) {
+    this._selectedFoodstandService.selectedFoodstand.subscribe(val => { this.foodstand = val; console.log(this.foodstand); console.log("test"); });
+
   }
 
   ngOnInit() {
 
     //this.foodstand = this._selectedFoodstandService.GetFoodstand();
-  } 
-
-  sellfoodButtonClick(){
-    this._router.navigate(['sellfood'])
-  }
-  changeimageButtonClick(){
-    this._router.navigate(['sellfood'])
   }
 
-  HasActiveItems(){
+  sellfoodButtonClick() {
+    this._router.navigate(['sellfood'])
+  }
+  changeimageButtonClick() {
+    this._router.navigate(['sellfood'])
+  }
+
+  HasActiveItems() {
     this.foodstand.productsFoodGrown.forEach(grownTypeElement => {
-       if (grownTypeElement.amount > 0)
-       {
-         this.hasActiveItems = true;
-         return;
-       }
-       this.hasActiveItems = false;
+      if (grownTypeElement.amount > 0) {
+        this.hasActiveItems = true;
+        return;
+      }
+      this.hasActiveItems = false;
     });
 
 
     return this.hasActiveItems;
   }
 
-  HasEmptyItems(){
+  HasEmptyItems() {
 
     this.foodstand.productsFoodGrown.forEach(grownTypeElement => {
-      if (grownTypeElement.amount == 0)
-      {
+      if (grownTypeElement.amount == 0) {
         this.hasEmptyItems = true;
         return;
       }
-      else{
+      else {
         this.hasEmptyItems = false;
 
       }
-   });
+    });
 
 
 
-   return this.hasEmptyItems;
+    return this.hasEmptyItems;
   }
 }

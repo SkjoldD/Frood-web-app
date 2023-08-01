@@ -8,25 +8,25 @@ import { GrowntypeHelperServiceService } from 'src/app/services/utilities/helper
   templateUrl: './foodstand-product-grown-item.component.html',
   styleUrls: ['./foodstand-product-grown-item.component.css']
 })
-export class FoodstandProductGrownItemComponent implements OnInit{
+export class FoodstandProductGrownItemComponent implements OnInit {
 
-  @Input() grownItem! : ProductFoodGrown;
+  @Input() grownItem!: ProductFoodGrown;
 
-  constructor(private _router : Router, private _grownTypeHelperService : GrowntypeHelperServiceService){
+  constructor(private _router: Router, private _grownTypeHelperService: GrowntypeHelperServiceService) {
   }
 
   ngOnInit(): void {
   }
 
-  GetRelatedImage(grownItem : ProductFoodGrown){
+  GetRelatedImage(grownItem: ProductFoodGrown) {
     //return _grownTypeHelperService.G
     return this._grownTypeHelperService.GetImage(grownItem.grownType);
   }
 
-  GetRelatedName(grownItem : ProductFoodGrown){
+  GetRelatedName(grownItem: ProductFoodGrown) {
     return this._grownTypeHelperService.GetName(grownItem.grownType);
   }
-  AnnounceSold(){
+  AnnounceSold() {
     this.grownItem.amount = 0;
   }
 }

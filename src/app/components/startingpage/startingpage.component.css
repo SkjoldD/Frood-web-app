@@ -1,41 +1,45 @@
-.map-container{
+.map-container {
     width: 100vw;
     height: 100vh;
-    margin-top:-16vh; /* IMPORATANT, IF CHANGES OCCUR IN WINDOW MARGIN, ADD HERE. REGULAR IS -15. ADD ON THE MARGIN FROM WINDOW*/
+    margin-top: -16vh;
+    /* IMPORATANT, IF CHANGES OCCUR IN WINDOW MARGIN, ADD HERE. REGULAR IS -15. ADD ON THE MARGIN FROM WINDOW*/
 }
 
-.menu-bottom-container{
+.menu-bottom-container {
     width: 100vw;
     height: 80px;
-    margin-top: min(-15vh, 80px); /* IMPORATANT, IF CHANGES OCCUR IN WINDOW MARGIN, ADD HERE. REGULAR IS -15. ADD ON THE MARGIN FROM WINDOW*/
+    margin-top: min(-15vh, 80px);
+    /* IMPORATANT, IF CHANGES OCCUR IN WINDOW MARGIN, ADD HERE. REGULAR IS -15. ADD ON THE MARGIN FROM WINDOW*/
     position: relative;
     border-radius: 50px;
     opacity: 1;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
-.menu-bottom-container-window{
-    margin: 1vh; /*THIS REF*/
+.menu-bottom-container-window {
+    margin: 1vh;
+    /*THIS REF*/
     height: 100%;
     width: 100%;
     background-color: aliceblue;
     color: black !important;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.30));
 
-    border-radius: min(5%,10px);
+    border-radius: min(5%, 10px);
 
     display: flex;
     justify-content: center;
-    align-items: row; 
+    align-items: row;
 
 }
 
-.menu-bottom-container-window-element-container{
+.menu-bottom-container-window-element-container {
     height: auto;
 }
-.menu-bottom-container-window-element{
+
+.menu-bottom-container-window-element {
     height: 100%;
     width: auto;
 }

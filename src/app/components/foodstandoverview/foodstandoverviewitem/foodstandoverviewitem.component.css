@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
 
-.input-container{
+.input-container {
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     min-height: 40%;
     max-width: 80%;
     background-color: #FBFDF7;
@@ -15,7 +15,7 @@
 
 }
 
-.container-foodstands{
+.container-foodstands {
     background-color: #FBFDF7;
 }
 
@@ -29,12 +29,12 @@
     width: 100%;
 }
 
-.foodstand-container{
+.foodstand-container {
     width: 100%;
     height: 40vh;
 }
 
-.foodstand-image{
+.foodstand-image {
     display: block;
     width: auto;
     height: 100%;
@@ -42,17 +42,18 @@
     margin-right: auto;
 }
 
-.delete-image{
+.delete-image {
     height: 6vh;
     width: auto;
 }
 
-.edit-image{
+.edit-image {
     height: 5vh;
     width: auto;
-    float: right;}
+    float: right;
+}
 
-.font-plus{
+.font-plus {
     font-family: url(/assets/font/static/Montserrat-Regular.ttf);
     font-weight: 100;
     color: #E7948E;
@@ -60,22 +61,22 @@
     text-align: center;
 }
 
-.growntype-container-images{
+.growntype-container-images {
     height: 30%;
     width: auto;
     display: flex;
     justify-content: center;
-    margin-top: min(-33vh); 
+    margin-top: min(-33vh);
     margin-left: auto;
     margin-right: auto;
 }
 
-.growntype-image{
-   height: 80%;
-   width: auto;
+.growntype-image {
+    height: 80%;
+    width: auto;
 }
 
-.location-font-medium-text{
+.location-font-medium-text {
     font-family: url(/assets/font/static/Montserrat-Regular.ttf);
     font-weight: 100;
     color: #E7948E;
@@ -83,19 +84,19 @@
     text-align: center;
 }
 
-.buttonarea{
+.buttonarea {
     justify-content: center;
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     width: 100%;
 }
 
 .mdc-button {
-    width:250px;
+    width: 250px;
     min-width: 40vw;
     max-width: 80vw;
     justify-content: center;
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
 }
 

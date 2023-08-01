@@ -8,10 +8,10 @@
 
     <div class="foodstand-container input-field">
         <img class="foodstand-image" src="assets/icons/foodstandanimation.png" alt="">
-        
+
         <img class="delete-image" src="assets/icons/trashcan-image.png" alt="" (click)="DeleteFoodstand()">
 
-        <img class="edit-image" src="assets/icons/edit-image.png" alt="">
+        <img class="edit-image" src="assets/icons/edit-image.png" alt="" (click)="EditfoodstandClick()">
         <div class="growntype-container-images">
             <div *ngFor="let product of foodstand.productsFoodGrown | slice:0:2">
                 <img class="growntype-image" [src]="GetRelatedImage(product)">
@@ -32,6 +32,6 @@
         <button mat-raised-button color="accent" (click)="FoodstandButtonClick(foodstand)">Se madbod</button>
     </div>
 </div>
-<app-modal [id]="foodstand.name"> 
+<app-modal [id]="foodstand.name">
     <app-popup-delete [(foodstands)]="foodstands" [foodstand]="foodstand"></app-popup-delete>
 </app-modal>

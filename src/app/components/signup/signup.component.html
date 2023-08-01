@@ -1,15 +1,10 @@
 <div class="complete-view">
-    
+
     <app-header [title]="'Opret profil'"></app-header>
-    
+
     <div class="signup-input-container">
         <mat-form-field class="input-field">
-            <mat-label>Navn</mat-label>
-            <input matInput placeholder="" value="">
-        </mat-form-field>
-
-        <mat-form-field class="input-field">
-            <mat-label>Efternavn</mat-label>
+            <mat-label>Brugernavn</mat-label>
             <input matInput placeholder="" value="">
         </mat-form-field>
 
@@ -20,44 +15,37 @@
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>-->
-            
+
         <mat-form-field class="input-field">
-            <mat-label>Mobil#</mat-label>
+            <mat-label>Mobil</mat-label>
             <input matInput placeholder="" value="">
-        </mat-form-field>           
-    
+        </mat-form-field>
+
         <mat-form-field class="input-field">
             <mat-label>Mail</mat-label>
             <input matInput placeholder="" value="">
-        </mat-form-field> 
-
-        <mat-form-field class="input-field">
-            <mat-label>Gentag mail</mat-label>
-            <input matInput placeholder="" value="">
-        </mat-form-field> 
+        </mat-form-field>
 
         <mat-form-field class="input-field">
             <mat-label>Password</mat-label>
             <input matInput placeholder="" value="">
-        </mat-form-field> 
+        </mat-form-field>
 
         <mat-form-field class="input-field">
             <mat-label>Gentag password</mat-label>
             <input matInput placeholder="" value="">
-        </mat-form-field> 
+        </mat-form-field>
 
         <mat-form-field class="input-field">
             <mat-label>Henvisningskode</mat-label>
             <input matInput placeholder="" value="">
         </mat-form-field>
-        
+
         <div class="button-area">
-            <button mat-raised-button color="accent" 
-            (click)="sellfoodButtonClick()">Upload profilbillede</button>
+            <button mat-raised-button color="accent" (click)="sellfoodButtonClick()">Upload profilbillede</button>
         </div>
         <div class="button-area">
-            <button mat-raised-button color="accent" 
-            (click)="assignButtonClick()">Opret</button>
+            <button mat-raised-button color="accent" (click)="assignButtonClick()">Opret</button>
         </div>
-    </div>        
+    </div>
 </div>

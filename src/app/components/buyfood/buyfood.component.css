@@ -1,13 +1,40 @@
-.input-container{
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
+
+.input-container {
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
-    display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     height: 40%;
     max-width: 90%;
     background-color: #FBFDF7;
     border-radius: 10px;
     padding: 5vw;
+}
+
+.mat-mdc-slider {
+    max-width: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mat-mdc-card+.mat-mdc-card {
+    margin-top: 8px;
+}
+
+.example-label-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 90%;
+}
+
+.font-medium-text {
+    font-family: url(/assets/font/static/Montserrat-Regular.ttf);
+    font-weight: 100;
+    color: #E7948E;
+    font-size: 18px;
+    text-align: center;
 }

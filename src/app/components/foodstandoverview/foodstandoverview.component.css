@@ -1,17 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
-.buttonarea{
+
+.buttonarea {
     justify-content: center;
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     width: 100%;
 }
 
 .mdc-button {
-    width:250px;
+    width: 250px;
     min-width: 40vw;
     max-width: 80vw;
     justify-content: center;
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
 }
 
@@ -21,13 +22,13 @@
     z-index: 0;
 }
 
-.button-popup {      
+.button-popup {
     background-color: #FBFDF7;
-    border-width: 0px;    
+    border-width: 0px;
 }
 
 .overlay {
-    position:fixed;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -69,7 +70,7 @@
 }
 
 .popup .close:hover {
-    color: #06D85F;   
+    color: #06D85F;
     cursor: pointer;
 }
 
@@ -80,11 +81,11 @@
     justify-content: space-around;
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 700px) {
 
-  .popup{
-    width: 70%;
-  }
+    .popup {
+        width: 70%;
+    }
 }
 
 .button-inside-popup {
@@ -99,13 +100,15 @@
     font-size: 18px;
     border-style: none;
     border-radius: 10%;
-    filter: drop-shadow(1px 1px 3px rgba(0,0,0,0.25));
+    filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.25));
 }
 
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
-
-
-

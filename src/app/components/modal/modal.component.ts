@@ -2,57 +2,57 @@ import { Component, ElementRef, Input, OnInit, OnDestroy } from '@angular/core';
 import { ModalServiceService } from 'src/app/services/pop-up/modal-service.service';
 
 @Component({
-  selector: 'app-modal',
-  templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.css']
+    selector: 'app-modal',
+    templateUrl: './modal.component.html',
+    styleUrls: ['./modal.component.css']
 })
 
 export class ModalComponent implements OnInit, OnDestroy {
-  @Input() id!: string;
-  private element: any;
+    @Input() id!: string;
+    private element: any;
 
-  constructor(private modalService: ModalServiceService, private el: ElementRef) {
-      this.element = el.nativeElement;
-  }
+    constructor(private modalService: ModalServiceService, private el: ElementRef) {
+        this.element = el.nativeElement;
+    }
 
-  ngOnInit(): void {
-      let modal = this;
+    ngOnInit(): void {
+        let modal = this;
 
-      // ensure id attribute exists
-      if (!this.id) {
-          console.error('modal must have an id');
-          return;
-      }
+        // ensure id attribute exists
+        if (!this.id) {
+            console.error('modal must have an id');
+            return;
+        }
 
-      // move element to bottom of page (just before </body>) so it can be displayed above everything else
-      document.body.appendChild(this.element);
+        // move element to bottom of page (just before </body>) so it can be displayed above everything else
+        document.body.appendChild(this.element);
 
-      // close modal on background click
-      this.element.addEventListener('click', function (e: any) {
-          if (e.target.className === 'jw-modal') {
-              modal.close();
-          }
-      });
+        // close modal on background click
+        this.element.addEventListener('click', function (e: any) {
+            if (e.target.className === 'jw-modal') {
+                modal.close();
+            }
+        });
 
-      // add self (this modal instance) to the modal service so it's accessible from controllers
-      this.modalService.add(this);
-  }
+        // add self (this modal instance) to the modal service so it's accessible from controllers
+        this.modalService.add(this);
+    }
 
-  // remove self from modal service when component is destroyed
-  ngOnDestroy(): void {
-      this.modalService.remove(this.id);
-      this.element.remove();
-  }
+    // remove self from modal service when component is destroyed
+    ngOnDestroy(): void {
+        this.modalService.remove(this.id);
+        this.element.remove();
+    }
 
-  // open modal
-  open(): void {
-      this.element.style.display = 'block';
-      document.body.classList.add('jw-modal-open');
-  }
+    // open modal
+    open(): void {
+        this.element.style.display = 'block';
+        document.body.classList.add('jw-modal-open');
+    }
 
-  // close modal
-  close(): void {
-      this.element.style.display = 'none';
-      document.body.classList.remove('jw-modal-open');
-  }
+    // close modal
+    close(): void {
+        this.element.style.display = 'none';
+        document.body.classList.remove('jw-modal-open');
+    }
 }

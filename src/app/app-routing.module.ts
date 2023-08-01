@@ -14,18 +14,18 @@ import { CreatefoodstandComponent } from './components/foodstandoverview/createf
 
 
 const routes: Routes = [
-  { path: '', component: HomepageComponent},
-  { path: 'login', component: LoginpageComponent},
-  { path: 'signup', component: SignupComponent},
-  { path: 'profile', component: ProfileHomeComponent},
-  { path: 'sellfood', component: SellfoodComponent},
-  { path: 'startingpage', component: StartingpageComponent},
-  { path: 'signup', component: SignupComponent},
-  { path: 'buyfood', component: BuyfoodComponent},
-  { path: 'foodstand', component: FoodstandComponent},
-  { path: 'foodstandOverview', component: FoodstandoverviewComponent},
-  { path: 'createfoodstand', component: CreatefoodstandComponent},
-  { path: '**', component: ErrorComponentComponent}
+  { path: '', component: HomepageComponent },
+  { path: 'login', component: LoginpageComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'profile', component: ProfileHomeComponent },
+  { path: 'sellfood', component: SellfoodComponent },
+  { path: 'startingpage', component: StartingpageComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'buyfood', component: BuyfoodComponent },
+  { path: 'foodstand', component: FoodstandComponent },
+  { path: 'foodstandOverview', component: FoodstandoverviewComponent },
+  { path: 'createfoodstand', component: CreatefoodstandComponent },
+  { path: '**', component: ErrorComponentComponent }
 ];
 
 @NgModule({

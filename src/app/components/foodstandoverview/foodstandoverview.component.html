@@ -1,8 +1,10 @@
 <app-header [title]="'Madboder'"></app-header>
-
-<div class="input-container container-grid" *ngFor="let foodstand of foodstands"> 
-    <app-foodstandoverviewitem [(foodstands)]="foodstands" [foodstand]="foodstand"></app-foodstandoverviewitem>
-</div> 
-<div class="buttonarea">
-<button mat-raised-button color="accent" (click)="CreatefoodstandButtonClick()">Opret ny madbod</button>
-</div> 
+<div class="complete-view">
+    <div class="input-container container-grid" *ngFor="let foodstand of foodstands">
+        <app-foodstandoverviewitem [(foodstands)]="foodstands" [foodstand]="foodstand"></app-foodstandoverviewitem>
+        <br>
+    </div>
+    <div class="buttonarea">
+        <button mat-raised-button color="accent" (click)="CreatefoodstandButtonClick()">Opret ny madbod</button>
+    </div>
+</div>

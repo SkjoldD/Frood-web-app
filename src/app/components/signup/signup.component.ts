@@ -7,15 +7,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-  
+
   constructor(private _router: Router) {
-    
+
   }
-  
-  assignButtonClick(){
+
+  assignButtonClick() {
     this._router.navigate(['startingpage'])
   }
-  sellfoodButtonClick(){
+  sellfoodButtonClick() {
     this._router.navigate(['**'])
   }
 }
