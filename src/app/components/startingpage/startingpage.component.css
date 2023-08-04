@@ -1,5 +1,5 @@
 .map-container {
-    width: 100vw;
+    width: auto;
     height: 100vh;
     margin-top: -16vh;
     /* IMPORATANT, IF CHANGES OCCUR IN WINDOW MARGIN, ADD HERE. REGULAR IS -15. ADD ON THE MARGIN FROM WINDOW*/
@@ -8,7 +8,7 @@
 .menu-bottom-container {
     width: 100vw;
     height: 80px;
-    margin-top: min(-15vh, 80px);
+    margin-top: min(90vh, 80px);
     /* IMPORATANT, IF CHANGES OCCUR IN WINDOW MARGIN, ADD HERE. REGULAR IS -15. ADD ON THE MARGIN FROM WINDOW*/
     position: relative;
     border-radius: 50px;
@@ -23,12 +23,11 @@
     /*THIS REF*/
     height: 100%;
     width: 100%;
-    background-color: aliceblue;
+    background-color: #FBFDF7;
     color: black !important;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.30));
 
     border-radius: min(5%, 10px);
-
     display: flex;
     justify-content: center;
     align-items: row;
@@ -43,3 +42,60 @@
     height: 100%;
     width: auto;
 }
+
+
+/*search section*/
+.search-container {
+    margin-top: min(-80vh, 100px);
+    /* IMPORATANT, IF CHANGES OCCUR IN WINDOW MARGIN, ADD HERE. REGULAR IS -15. ADD ON THE MARGIN FROM WINDOW*/
+    position: relative;
+    opacity: 100;
+    display: flex;
+    justify-content: center;
+}
+
+.results {
+    display: grid;
+    column-gap: 14px;
+    row-gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(800px, 800px));
+    margin-top: 50px;
+    justify-content: space-around;
+  }
+  
+  input[type="text"] {
+    border: solid 1px var(--primary-color);
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block ;
+    width: 70%;
+  }
+
+    .mat-mdc-raised-button.mat-accent {
+    --mdc-protected-button-container-color: #E7948E;
+    --mdc-protected-button-label-text-color: #fff;
+    }
+  
+    button {
+   
+    padding: 10px;
+    border: solid 1px var(--primary-color);
+    background: var(--primary-color);
+    color: rgb(204, 53, 53);
+    border-radius: 50px;
+  }
+  
+  @media (min-width: 500px) and (max-width: 768px) {
+    .results {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    input[type="text"] {
+        width: 70%;
+    }   
+  }
+  
+  @media (max-width: 499px) {
+    .results {
+        grid-template-columns: 1fr;
+    }    
+  }

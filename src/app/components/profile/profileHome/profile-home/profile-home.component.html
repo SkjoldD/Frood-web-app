@@ -1,7 +1,6 @@
 <div class="complete-view">
     <app-header [title]="'Profil'"></app-header>
 
-    <img class="profile-settings-icon-placement" src="assets/icons/profile/settings-icon.png" />
     <div class="input-container">
         <div class="image-text">
             <div class="font-medium-headlines-profile">Hej *navn*</div>
@@ -28,7 +27,7 @@
         </mat-form-field>
 
         <div class="button-area">
-            <button mat-raised-button color="accent">Gem ændringer</button>
+            <button mat-raised-button color="accent"(click)="FoodstandoverviewButtonClick()">Gem ændringer</button>
         </div>
 
     </div>

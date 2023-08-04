@@ -19,4 +19,8 @@ export class FoodstandoverviewComponent {
   CreatefoodstandButtonClick() {
     this._router.navigate(['createfoodstand'])
   }
+
+  ProfileButtonClick() {
+    this._router.navigate(['profile'])
+  }
 }

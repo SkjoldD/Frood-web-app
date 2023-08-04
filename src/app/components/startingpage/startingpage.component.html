@@ -5,20 +5,24 @@
         <map-marker *ngFor="let marker of markers" [position]="marker.position"></map-marker>
     </google-map>
 </div>
+ 
+<section class="search-container">
+    <form>
+        <input type="text" placeholder="Filtrer produkter">
+        <button mat-raised-button color="accent" type="button">Søg</button>
+    </form>
+ </section>
+
 <div class="menu-bottom-container">
     <div class="menu-bottom-container-window">
-        <button (click)="foodstandiconButtonClick()">
+        <!-- <button (click)="foodstandiconButtonClick()">
             <img class="menu-bottom-container-window-element" src="assets/icons/menu/menua.png" />
-        </button>
+        </button>-->
+        
         <div class="menu-bottom-container-window-element-container">
-            <button (click)="profileiconButtonClick()">
-                <img class="menu-bottom-container-window-element" src="assets/icons/menu/menuc.png" />
-            </button>
-        </div>
-        <div class="menu-bottom-container-window-element-container">
-            <button (click)="basketiconButtonClick()">
+            <!--<button (click)="basketiconButtonClick()">
                 <img class="menu-bottom-container-window-element" src="assets/icons/menu/menub.png" />
-            </button>
+            </button>-->
 
         </div>
     </div>
