@@ -1,5 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { Foodstand } from 'src/app/classes/foodstands/foodstand';
+import { ProductFoodGrown } from 'src/app/classes/product-food-grown';
+import { FoodstandService } from 'src/app/services/http/foodstand/foodstand.service';
+import { ModalServiceService } from 'src/app/services/pop-up/modal-service.service';
+import { SelectedFoodstandService } from 'src/app/services/selected/foodstand/selected-foodstand.service';
+import { GrowntypeHelperServiceService } from 'src/app/services/utilities/helper/growntype-helper-service.service';
 
 interface MarkerProperties {
   position: {
@@ -32,6 +38,14 @@ export class StartingpageComponent implements OnInit {
     disableDefaultUI: true
   };
 
+  markerOptions: google.maps.MarkerOptions = {
+    icon: { 
+      url: "assets/icons/foodstandanimation.png",
+      scaledSize:new google.maps.Size(70,70)
+  },
+
+  };
+
   ngOnInit() {
 
     return this.geogeo();
@@ -57,9 +71,19 @@ export class StartingpageComponent implements OnInit {
     });
   }
 
-  constructor(private _router: Router) {
-
+  constructor(private _modalserviceservice: ModalServiceService,
+    private _router: Router,
+    private _foodstandService: FoodstandService) {
+    this.foodstands = this._foodstandService.read_all();
   }
+
+  foodstands!: Foodstand[];
+
+  MarkerClick(){
+    this._modalserviceservice.open("map-selection")
+    console.log("skjld")
+  }
+
   basketiconButtonClick() {
     this._router.navigate(['foodstandOverview'])
   }

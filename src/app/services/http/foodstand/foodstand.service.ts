@@ -38,7 +38,7 @@ export class FoodstandService {
     productGrownItems.push(productGrownItem10);
     productGrownItems.push(productGrownItem11);
 
-    const locationA = new Location(-1, 3600, "Denmark", "Frederikssund", "Erantisvej", "5");
+    const locationA = new Location(-1, 3600, "Denmark", "Frederikssund", "Erantisvej", "5", { lat: 55.840750705472225, lng: 12.07848508178017 });
 
     const foodstandA = new Foodstand(1, locationA, new Date(Date.now.toString()), "Skjolds madbod", "mega fed madbod uden noget mad", productGrownItems)
 
@@ -57,7 +57,7 @@ export class FoodstandService {
     productGrownItemsB.push(productGrownItemB4);
     productGrownItemsB.push(productGrownItemB5);
 
-    const locationB = new Location(-1, 3600, "Denmark", "Frederiksværk", "Et eller andet sted", "5");
+    const locationB = new Location(-1, 3600, "Denmark", "Frederiksværk", "Hanehovedvej", "95", { lat: 55.972887102645274, lng: 11.99837939302953 });
 
     const foodstandB = new Foodstand(1, locationB, new Date(Date.now.toString()), "Merles madbod", "Ikke så cool som skjolds", productGrownItemsB)
 
@@ -75,7 +75,7 @@ export class FoodstandService {
     productGrownItemsC.push(productGrownItemC4);
     productGrownItemsC.push(productGrownItemC5);
 
-    const locationC = new Location(-1, 3600, "Space", "Sun", "Flare", "10");
+    const locationC = new Location(-1, 3600, "Space", "Sun", "Flare", "10", { lat: 55.93675559724282, lng: 12.118635796231176 });
 
     const foodstandC = new Foodstand(1, locationC, new Date(Date.now.toString()), "Potato madman madbod med et meget langt navn hah, se hvad du vil gøre her smerl", "so much potato and a very long long long long description jadajdajdajdajdja", productGrownItemsC)
 

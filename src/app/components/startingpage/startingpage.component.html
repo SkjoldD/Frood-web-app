@@ -2,7 +2,13 @@
 <div class="map-container">
     <google-map height="100%" width="100%" [zoom]="zoom" [center]="center" [options]="options">
 
-        <map-marker *ngFor="let marker of markers" [position]="marker.position"></map-marker>
+        <map-marker
+        *ngFor="let x of foodstands"
+        [position]="x.location.latLon"
+        [options]="markerOptions"
+        (mapClick)="MarkerClick()"
+        >
+        </map-marker>
     </google-map>
 </div>
 
@@ -20,3 +26,9 @@
             </button>
     </div>
 </div>
+
+<app-modal id="map-selection">
+skjold er en nar
+
+
+</app-modal>

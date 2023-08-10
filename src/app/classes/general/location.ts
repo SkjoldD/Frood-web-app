@@ -7,6 +7,7 @@ export class Location {
         private _city : string = "",
         private _streetName : string = "",
         private _streetNumber : string = "",
+        private _latLon : google.maps.LatLngLiteral = { lat: 55.6638295, lng: 12.5414299 }
         ){
 
     }
@@ -28,4 +29,7 @@ export class Location {
 
     get streetNumber(): string{return this._streetNumber;}
     set streetNumber(_val : string){this._streetNumber = _val;}
+
+    get latLon(): google.maps.LatLngLiteral{return this._latLon;}
+    set latLon(_val : google.maps.LatLngLiteral){this._latLon = _val;}
 }

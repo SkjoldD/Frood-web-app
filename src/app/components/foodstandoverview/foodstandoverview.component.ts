@@ -13,7 +13,7 @@ export class FoodstandoverviewComponent {
   constructor(private _foodstandService: FoodstandService, private _router: Router) {
     this.foodstands = this._foodstandService.read_all();
   }
-
+  
   foodstands!: Foodstand[];
 
   CreatefoodstandButtonClick() {
