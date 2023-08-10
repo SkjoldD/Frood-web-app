@@ -9,8 +9,18 @@
         <app-foodstandoverviewitem [(foodstands)]="foodstands" [foodstand]="foodstand"></app-foodstandoverviewitem>
         <br>
     </div>
+    <div class="menu-bottom-container">
+        <div class="menu-bottom-container-window">
+            <button class="menubutton" (click)="StartingpageButtonClick()">
+                <img class="menu-bottom-container-window-element" src="assets/icons/menu/pin-menu.png" />
+            </button>
+        </div>
+    </div>
+    
     <div class="buttonarea">
         <button mat-raised-button color="accent" (click)="CreatefoodstandButtonClick()">Opret ny madbod</button>
     </div>
+
+    
     
 </div>

@@ -8,34 +8,29 @@
 .menu-bottom-container {
     width: 100vw;
     height: 80px;
-    margin-top: min(90vh, 80px);
-    /* IMPORATANT, IF CHANGES OCCUR IN WINDOW MARGIN, ADD HERE. REGULAR IS -15. ADD ON THE MARGIN FROM WINDOW*/
-    position: relative;
-    border-radius: 50px;
+    position: fixed;
+    border-radius: 100px;
     opacity: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: end;
+    bottom: 5%;
+    z-index: 3000;
 }
 
 .menu-bottom-container-window {
     margin: 1vh;
     /*THIS REF*/
     height: 100%;
-    width: 100%;
+    width:25%;
     background-color: #FBFDF7;
     color: black !important;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.30));
 
-    border-radius: min(5%, 10px);
+    border-radius: 30%;
     display: flex;
     justify-content: center;
     align-items: row;
 
-}
-
-.menu-bottom-container-window-element-container {
-    height: auto;
 }
 
 .menu-bottom-container-window-element {

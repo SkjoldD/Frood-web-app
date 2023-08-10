@@ -23,4 +23,8 @@ export class FoodstandoverviewComponent {
   ProfileButtonClick() {
     this._router.navigate(['profile'])
   }
+
+  StartingpageButtonClick() {
+    this._router.navigate(['startingpage'])
+  }
 }
