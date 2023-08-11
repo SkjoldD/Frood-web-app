@@ -2,13 +2,10 @@
 <div class="map-container">
     <google-map height="100%" width="100%" [zoom]="zoom" [center]="center" [options]="options">
 
-        <map-marker
-        *ngFor="let x of foodstands"
-        [position]="x.location.latLon"
-        [options]="markerOptions"
-        (mapClick)="MarkerClick()"
-        >
+        <map-marker *ngFor="let x of foodstands" [position]="x.location.latLon" [options]="markerOptions"
+            (mapClick)="MarkerClick()">
         </map-marker>
+        
     </google-map>
 </div>
 
@@ -21,14 +18,14 @@
 
 <div class="menu-bottom-container">
     <div class="menu-bottom-container-window">
-            <button (click)="basketiconButtonClick()">
-                <img class="menu-bottom-container-window-element" src="assets/icons/menu/booth-menu.png" />
-            </button>
+        <button (click)="basketiconButtonClick()">
+            <img class="menu-bottom-container-window-element" src="assets/icons/menu/booth-menu.png" />
+        </button>
     </div>
 </div>
 
-<app-modal id="map-selection">
-skjold er en nar
-
-
-</app-modal>
+<div class="input-container container-grid" *ngFor="let foodstand of foodstands">
+    <app-modal id="map-selection" >
+        <app-popupfoodstandcontent [(foodstands)]="foodstands" [foodstand]="foodstand"></app-popupfoodstandcontent>
+    </app-modal>
+</div>

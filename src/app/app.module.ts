@@ -49,6 +49,7 @@ import { FoodstandoverviewitemComponent } from './components/foodstandoverview/f
 import { PopupDeleteComponent } from './components/foodstandoverview/popup-delete/popup-delete.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatSliderModule } from '@angular/material/slider';
+import { PopupfoodstandcontentComponent } from './components/startingpage/popupfoodstandcontent/popupfoodstandcontent.component';
 
 
 @NgModule({
@@ -74,6 +75,7 @@ import { MatSliderModule } from '@angular/material/slider';
     ModalComponent,
     FoodstandoverviewitemComponent,
     PopupDeleteComponent,
+    PopupfoodstandcontentComponent,
   ],
   imports: [
     BrowserModule,

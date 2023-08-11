@@ -4,8 +4,6 @@ import { Foodstand } from 'src/app/classes/foodstands/foodstand';
 import { ProductFoodGrown } from 'src/app/classes/product-food-grown';
 import { FoodstandService } from 'src/app/services/http/foodstand/foodstand.service';
 import { ModalServiceService } from 'src/app/services/pop-up/modal-service.service';
-import { SelectedFoodstandService } from 'src/app/services/selected/foodstand/selected-foodstand.service';
-import { GrowntypeHelperServiceService } from 'src/app/services/utilities/helper/growntype-helper-service.service';
 
 interface MarkerProperties {
   position: {
@@ -26,7 +24,7 @@ export class StartingpageComponent implements OnInit {
   center: google.maps.LatLngLiteral = { lat: 55.6638295, lng: 12.5414299 };
 
   markers: MarkerProperties[] = [
-    { position: { lat: 48.8584, lng: 2.2945 } }, // Eiffel Tower
+    { position: { lat: 55.936732, lng: 12.268858 },}, // Eiffel Tower
   ];
 
   options: google.maps.MapOptions = {
@@ -36,11 +34,12 @@ export class StartingpageComponent implements OnInit {
     maxZoom: 24,
     minZoom: 4,
     disableDefaultUI: true
+
   };
 
   markerOptions: google.maps.MarkerOptions = {
     icon: { 
-      url: "assets/icons/foodstandanimation.png",
+      url: "assets/icons/foodstand-map.png",
       scaledSize:new google.maps.Size(70,70)
   },
 
@@ -69,9 +68,11 @@ export class StartingpageComponent implements OnInit {
       timeout: 2000,
       enableHighAccuracy: true
     });
+    
   }
 
-  constructor(private _modalserviceservice: ModalServiceService,
+  constructor(
+    private _modalserviceservice: ModalServiceService,
     private _router: Router,
     private _foodstandService: FoodstandService) {
     this.foodstands = this._foodstandService.read_all();
@@ -88,12 +89,5 @@ export class StartingpageComponent implements OnInit {
     this._router.navigate(['foodstandOverview'])
   }
 
-  profileiconButtonClick() {
-    this._router.navigate(['profile'])
-  }
-
-  foodstandiconButtonClick() {
-    this._router.navigate(['buyfood'])
-  }
 
 }
