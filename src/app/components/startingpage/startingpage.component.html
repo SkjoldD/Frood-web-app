@@ -5,7 +5,7 @@
         <map-marker *ngFor="let x of foodstands" [position]="x.location.latLon" [options]="markerOptions"
             (mapClick)="MarkerClick()">
         </map-marker>
-        
+
     </google-map>
 </div>
 
@@ -25,7 +25,9 @@
 </div>
 
 <div class="input-container container-grid" *ngFor="let foodstand of foodstands">
-    <app-modal id="map-selection" >
-        <app-popupfoodstandcontent [(foodstands)]="foodstands" [foodstand]="foodstand"></app-popupfoodstandcontent>
+    <app-modal id="map-selection">
+        <div class="overflow-scroll">
+            <app-popupfoodstandcontent [(foodstands)]="foodstands" [foodstand]="foodstand"></app-popupfoodstandcontent>
+        </div>
     </app-modal>
 </div>

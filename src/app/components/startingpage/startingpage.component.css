@@ -1,3 +1,8 @@
+.overflow-scroll {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
 .map-container {
     width: auto;
     height: 100vh;
