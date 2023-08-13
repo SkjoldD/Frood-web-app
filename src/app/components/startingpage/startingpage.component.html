@@ -1,9 +1,12 @@
 <app-header [title]="'Kort'"></app-header>
 <div class="map-container">
-    <google-map height="100%" width="100%" [zoom]="zoom" [center]="center" [options]="options">
+    <google-map height="100%" width="100%" [zoom]="zoom" [center]="center" [options]="mapOptions" (center_changed)="CenterChange()">
 
-        <map-marker *ngFor="let x of foodstands" [position]="x.location.latLon" [options]="markerOptions"
-            (mapClick)="MarkerClick()">
+        <map-marker *ngFor="let x of foodstands" [position]="x.location.latLon" [options]="foodstandMarkerOptions"
+            (mapClick)="MarkerClick(x)">
+        </map-marker>
+        
+        <map-marker [position]="center" [options]="myLocationMarkerOptions">
         </map-marker>
 
     </google-map>
@@ -25,9 +28,9 @@
 </div>
 
 <div class="input-container container-grid" *ngFor="let foodstand of foodstands">
-    <app-modal id="map-selection">
+    <app-modal [id]="foodstand.name">
         <div class="overflow-scroll">
-            <app-popupfoodstandcontent [(foodstands)]="foodstands" [foodstand]="foodstand"></app-popupfoodstandcontent>
+            <app-popupfoodstandcontent [foodstand]="foodstand"></app-popupfoodstandcontent>
         </div>
     </app-modal>
 </div>

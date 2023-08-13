@@ -27,7 +27,7 @@ export class StartingpageComponent implements OnInit {
     { position: { lat: 55.936732, lng: 12.268858 },}, // Eiffel Tower
   ];
 
-  options: google.maps.MapOptions = {
+  mapOptions: google.maps.MapOptions = {
     zoomControl: false,
     scrollwheel: true,
     disableDoubleClickZoom: true,
@@ -37,12 +37,18 @@ export class StartingpageComponent implements OnInit {
 
   };
 
-  markerOptions: google.maps.MarkerOptions = {
+  foodstandMarkerOptions: google.maps.MarkerOptions = {
     icon: { 
-      url: "assets/icons/foodstand-map.png",
-      scaledSize:new google.maps.Size(70,70)
-  },
+      url: "assets/icons/foodstand-icon-updated.png",
+      scaledSize:new google.maps.Size(70,110)
+    }
+  };
 
+  myLocationMarkerOptions: google.maps.MarkerOptions = {
+    icon: { 
+      url: "assets/icons/coloured-pin-icon wodden.png",
+      scaledSize:new google.maps.Size(60,70)
+    }
   };
 
   ngOnInit() {
@@ -80,10 +86,15 @@ export class StartingpageComponent implements OnInit {
 
   foodstands!: Foodstand[];
 
-  MarkerClick(){
-    this._modalserviceservice.open("map-selection")
+  MarkerClick(foodstand: Foodstand){
+    this._modalserviceservice.open(foodstand.name)
     console.log("skjld")
   }
+  
+  CenterChange(){
+    console.log("center changed")
+  }
+
 
   basketiconButtonClick() {
     this._router.navigate(['foodstandOverview'])

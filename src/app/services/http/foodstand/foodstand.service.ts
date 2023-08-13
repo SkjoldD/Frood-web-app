@@ -79,9 +79,28 @@ export class FoodstandService {
 
     const foodstandC = new Foodstand(1, locationC, new Date(Date.now.toString()), "Potato madman madbod med et meget langt navn hah, se hvad du vil gøre her smerl", "so much potato and a very long long long long description jadajdajdajdajdja", productGrownItemsC)
 
+    const productGrownItemsD = [];
+
+    const productGrownItemD1 = new ProductFoodGrown(-1,GrownType.Strawberry,13,1);
+    const productGrownItemD2 = new ProductFoodGrown(-1,GrownType.Pear,5,6);
+    const productGrownItemD3 = new ProductFoodGrown(-1,GrownType.Carrot,12,10);
+    const productGrownItemD4 = new ProductFoodGrown(-1,GrownType.Cherry, 5, 0);
+    const productGrownItemD5 = new ProductFoodGrown(-1,GrownType.Potato,11,3);
+
+    productGrownItemsD.push(productGrownItemD1);
+    productGrownItemsD.push(productGrownItemD2);
+    productGrownItemsD.push(productGrownItemD3);
+    productGrownItemsD.push(productGrownItemD4);
+    productGrownItemsD.push(productGrownItemD5);
+
+    const locationD = new Location(-1, 2500, "Denmark", "Valby", "Søndervangs Allé", "14th", { lat: 55.65522302236168, lng:  12.497355409831249 });
+
+    const foodstandD = new Foodstand(1, locationD, new Date(Date.now.toString()), "Deivids' Honey Booth", "Just sellin' some good ol' honey", productGrownItemsD)
+
     this.foodstands.push(foodstandA);
     this.foodstands.push(foodstandB);
     this.foodstands.push(foodstandC);
+    this.foodstands.push(foodstandD);
    }
 
   read_all()
