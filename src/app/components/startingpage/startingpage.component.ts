@@ -47,7 +47,7 @@ export class StartingpageComponent implements OnInit {
   myLocationMarkerOptions: google.maps.MarkerOptions = {
     icon: { 
       url: "assets/icons/coloured-pin-icon wodden.png",
-      scaledSize:new google.maps.Size(60,70)
+      scaledSize:new google.maps.Size(50,60)
     }
   };
 

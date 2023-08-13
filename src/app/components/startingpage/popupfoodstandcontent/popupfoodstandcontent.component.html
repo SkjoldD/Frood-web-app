@@ -1,19 +1,19 @@
 <div class="input-field">
-    
-    <div class="font-headlines">{{foodstand.name | slice: 0:15}}
 
-        <div class="location-font-medium-text">
-            {{foodstand.location.streetName}}
-            {{foodstand.location.streetNumber}},
-            <br>
-            {{foodstand.location.zipCode}}
-            {{foodstand.location.city}}
+    <div class="font-headlines">{{foodstand.name | slice: 0:20}}
+   <br>
+    X km fra dig
+</div>
+    <div class="growntype-image-container">
+        <div *ngFor="let product of foodstand.productsFoodGrown">
+            <img class="growntype-image" [src]="GetRelatedImage(product)">
         </div>
-
     </div>
-
-    <div *ngFor="let product of foodstand.productsFoodGrown | slice:0:2">
-        <img class="growntype-image" [src]="GetRelatedImage(product)">
+    <div class="font-medium-popup">
+        {{foodstand.location.streetName}}
+        {{foodstand.location.streetNumber}},
+        <br>
+        {{foodstand.location.zipCode}}
+        {{foodstand.location.city}}
     </div>
-    
 </div>
