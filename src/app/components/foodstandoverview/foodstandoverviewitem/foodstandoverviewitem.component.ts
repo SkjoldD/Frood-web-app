@@ -49,7 +49,7 @@ export class FoodstandoverviewitemComponent implements OnInit {
   }
 
   EditfoodstandClick() {
-    this._router.navigate(['createfoodstand'])
+    this._router.navigate(['foodstand'])
   }
 
 }

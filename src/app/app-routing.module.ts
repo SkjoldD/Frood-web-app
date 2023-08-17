@@ -11,6 +11,7 @@ import { ProfileHomeComponent } from './components/profile/profileHome/profile-h
 import { FoodstandComponent } from './components/foodstand/foodstand.component';
 import { FoodstandoverviewComponent } from './components/foodstandoverview/foodstandoverview.component';
 import { CreatefoodstandComponent } from './components/foodstandoverview/createfoodstand/createfoodstand.component';
+import { EditfoodstandComponent } from './components/foodstandoverview/editfoodstand/editfoodstand.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'foodstand', component: FoodstandComponent },
   { path: 'foodstandOverview', component: FoodstandoverviewComponent },
   { path: 'createfoodstand', component: CreatefoodstandComponent },
+  { path: 'editfoodstand', component: EditfoodstandComponent },
   { path: '**', component: ErrorComponentComponent }
 ];
 

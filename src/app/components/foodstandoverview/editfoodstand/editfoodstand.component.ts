@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable, map, startWith } from 'rxjs';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+import { Foodstand } from 'src/app/classes/foodstands/foodstand';
+import { FoodstandService } from 'src/app/services/http/foodstand/foodstand.service';
 
 interface MarkerProperties {
   position: {
@@ -10,18 +11,26 @@ interface MarkerProperties {
 };
 
 @Component({
-  selector: 'app-createfoodstand',
-  templateUrl: './createfoodstand.component.html',
-  styleUrls: ['./createfoodstand.component.css']
+  selector: 'app-editfoodstand',
+  templateUrl: './editfoodstand.component.html',
+  styleUrls: ['./editfoodstand.component.css']
 })
-export class CreatefoodstandComponent implements OnInit {
+
+
+export class EditfoodstandComponent implements OnInit {
+  constructor(
+    private _foodstandService: FoodstandService,
+    private _router: Router) {
+    this.foodstands = this._foodstandService.read_all();
+  }
+  @Input() foodstand!: Foodstand;
+  @Input() foodstands!: Foodstand[];
+  @Output() foodstandsChange = new EventEmitter<Foodstand[]>();
 
   zoom = 12;
   center: google.maps.LatLngLiteral = { lat: 55.6638295, lng: 12.5414299 };
 
-  markers: MarkerProperties[] = [
-    { position: { lat: 48.8584, lng: 2.2945 } }, // Eiffel Tower
-  ];
+  markers: MarkerProperties[] = [];
 
   options: google.maps.MapOptions = {
     zoomControl: false,
@@ -56,12 +65,9 @@ export class CreatefoodstandComponent implements OnInit {
       enableHighAccuracy: true
     });
   }
-
-  constructor(private _router: Router) {
-  }
-
-  UploadnewfoodstandButtonClick() {
-    this._router.navigate(['startingpage'])
+  
+  saveChangesButtonClick() {
+    this._router.navigate(['foodstandOverview'])
   }
 
   useMyAddress: boolean = false;

@@ -32,5 +32,13 @@ export class PopupfoodstandcontentComponent implements OnInit {
     return this._grownTypeHelperService.GetProductImage(grownItem.grownType);
   }
 
+  Growntypeinfo() {
+    this._modalserviceservice.open(this.foodstand.name)
+    console.log("Further info on growntype")
+    //const index = this.foodstands.indexOf(foodstand, 0);
+    //if (index > -1) {
+    //this.foodstands.splice(index, 1);
+    // }  
+  }
   
 }

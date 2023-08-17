@@ -1,0 +1,63 @@
+<app-header [title]="'Redigér'"></app-header>
+<div class="complete-view">
+ <div class="input-container-createfoodstand">
+        <div class="font-medium-headlines">Hvad skal din madbod hedde?</div>
+
+        <mat-form-field class="input-field">
+            <mat-label>Madbodens navn</mat-label>
+            <input matInput placeholder="" value="">
+        </mat-form-field>
+
+        
+        <div class="font-medium-headlines">Beskrivelse af madboden</div>
+
+        <mat-form-field class="input-field">
+            <mat-label>Beskrivelse</mat-label>
+            <textarea matInput></textarea>
+        </mat-form-field>
+
+        <div class="font-medium-headlines">Madbodens placering</div>
+        <div class="input-field">
+            <section class="toggle-text"> Brug min placering
+                <mat-checkbox class="checkbox-margin" (change)="UseMyAddress()"></mat-checkbox>
+
+            </section>
+        </div>
+    </div>
+    <div *ngIf="useMyAddress==false" class="map-view">
+        <google-map height="25vh" width="90%" [zoom]="zoom" [center]="center" [options]="options">
+            <map-marker *ngFor="let marker of markers" [position]="marker.position"></map-marker>
+        </google-map>
+    </div>
+
+    <div *ngIf="useMyAddress==false" class="input-container-createfoodstand">
+        <mat-form-field class="input-field">
+            <mat-label>Vejnavn + nummer </mat-label>
+            <input matInput placeholder="" value="">
+        </mat-form-field>
+
+        <mat-form-field class="input-field">
+            <mat-label>By</mat-label>
+            <input matInput placeholder="" value="">
+        </mat-form-field>
+
+        <mat-form-field class="input-field">
+            <mat-label>Postnummer</mat-label>
+            <input matInput placeholder="" value="">
+        </mat-form-field>
+    </div>
+    <div class="input-container-createfoodstand">
+        <div class="font-medium-headlines">Betalingsmuligheder</div>
+        <div class="toggle-text input-field">Mobilepay <mat-slide-toggle class="toggle-placing"></mat-slide-toggle>
+        </div>
+        <div class="toggle-text input-field">Kontant <mat-slide-toggle class="toggle-placing"></mat-slide-toggle>
+        </div>
+        <div class="toggle-text input-field">Vis mobil nr. <mat-slide-toggle class="toggle-placing"></mat-slide-toggle>
+        </div>
+        <div class="buttonarea">
+            <button mat-raised-button color="accent" (click)="saveChangesButtonClick()">Gem ændringer</button>
+        </div>
+    </div>
+
+
+</div>
