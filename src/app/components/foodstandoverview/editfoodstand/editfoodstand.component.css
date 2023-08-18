@@ -45,3 +45,8 @@
     --mdc-protected-button-container-color: #E7948E;
     --mdc-protected-button-label-text-color: #fff;
 }
+
+.icon-image {
+    height: 6vh;
+    width: auto;
+}

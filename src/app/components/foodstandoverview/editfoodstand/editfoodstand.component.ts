@@ -2,6 +2,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { Foodstand } from 'src/app/classes/foodstands/foodstand';
 import { FoodstandService } from 'src/app/services/http/foodstand/foodstand.service';
+import { ModalServiceService } from 'src/app/services/pop-up/modal-service.service';
+import { SelectedFoodstandService } from 'src/app/services/selected/foodstand/selected-foodstand.service';
 
 interface MarkerProperties {
   position: {
@@ -20,8 +22,11 @@ interface MarkerProperties {
 export class EditfoodstandComponent implements OnInit {
   constructor(
     private _foodstandService: FoodstandService,
-    private _router: Router) {
-    this.foodstands = this._foodstandService.read_all();
+    private _router: Router,
+    private _modalserviceservice: ModalServiceService,
+    private _selectedFoodstandService: SelectedFoodstandService) {
+      this._selectedFoodstandService.selectedFoodstand.subscribe(val => { this.foodstand = val; console.log(this.foodstand); console.log("test"); });
+      this.foodstands = this._foodstandService.read_all();
   }
   @Input() foodstand!: Foodstand;
   @Input() foodstands!: Foodstand[];
@@ -41,7 +46,11 @@ export class EditfoodstandComponent implements OnInit {
     disableDefaultUI: true
   };
 
-  ngOnInit() {
+ 
+
+  ngOnInit() : void {
+    this._modalserviceservice.add(this.foodstand.name);
+
 
     return this.geogeo();
   }
@@ -75,5 +84,13 @@ export class EditfoodstandComponent implements OnInit {
   UseMyAddress() {
     this.useMyAddress = !this.useMyAddress;
     console.log(this.useMyAddress);
+  }
+
+  DeleteFoodstand() {
+    this._modalserviceservice.open(this.foodstand.name)
+    //const index = this.foodstands.indexOf(foodstand, 0);
+    //if (index > -1) {
+    //this.foodstands.splice(index, 1);
+    // }  
   }
 }

@@ -1,18 +1,22 @@
 <app-header [title]="'Redigér'"></app-header>
+
 <div class="complete-view">
  <div class="input-container-createfoodstand">
-        <div class="font-medium-headlines">Hvad skal din madbod hedde?</div>
+    <img class="icon-image" src="assets/icons/trashcan-image.png" alt="" (click)="DeleteFoodstand()">
+    <img class="deactivate-image" src="assets/icons/deactivate.png" alt="" (click)="DeleteFoodstand()">
+    
+    <div class="font-medium-headlines">Hvad skal din madbod hedde?</div>
 
         <mat-form-field class="input-field">
-            <mat-label>Madbodens navn</mat-label>
-            <input matInput placeholder="" value="">
+            <mat-label>{{foodstand.name | slice: 0:25}}{{foodstand.name.length > 25 ? '...' : ''}}</mat-label>
+            <input matInput placeholder="{{foodstand.name}}" value="">
         </mat-form-field>
 
         
         <div class="font-medium-headlines">Beskrivelse af madboden</div>
 
         <mat-form-field class="input-field">
-            <mat-label>Beskrivelse</mat-label>
+            <mat-label>{{foodstand.description | slice: 0:25 }}{{foodstand.description.length > 25 ? '...' : ''}}</mat-label>
             <textarea matInput></textarea>
         </mat-form-field>
 
@@ -58,6 +62,8 @@
             <button mat-raised-button color="accent" (click)="saveChangesButtonClick()">Gem ændringer</button>
         </div>
     </div>
-
+    <app-modal [id]="foodstand.name">
+        <app-popup-delete [(foodstands)]="foodstands" [foodstand]="foodstand"></app-popup-delete>
+    </app-modal>
 
 </div>

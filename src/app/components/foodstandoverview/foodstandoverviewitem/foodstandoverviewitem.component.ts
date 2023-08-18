@@ -32,6 +32,7 @@ export class FoodstandoverviewitemComponent implements OnInit {
 
   DeleteFoodstand() {
     this._modalserviceservice.open(this.foodstand.name)
+    console.log("delete works")
     //const index = this.foodstands.indexOf(foodstand, 0);
     //if (index > -1) {
     //this.foodstands.splice(index, 1);
@@ -48,8 +49,9 @@ export class FoodstandoverviewitemComponent implements OnInit {
     this._router.navigate(['foodstand'])
   }
 
-  EditfoodstandClick() {
-    this._router.navigate(['foodstand'])
+  EditfoodstandClick(foodstand: Foodstand) {
+    this._selectedFoodstandService.selectedFoodstand.next(foodstand);
+    this._router.navigate(['editfoodstand'])
   }
 
 }
