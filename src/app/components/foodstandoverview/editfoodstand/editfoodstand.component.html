@@ -1,22 +1,21 @@
 <app-header [title]="'Redigér'"></app-header>
 
 <div class="complete-view">
- <div class="input-container-createfoodstand">
-    <img class="icon-image" src="assets/icons/trashcan-image.png" alt="" (click)="DeleteFoodstand()">
-    <img class="deactivate-image" src="assets/icons/deactivate.png" alt="" (click)="DeleteFoodstand()">
-    
-    <div class="font-medium-headlines">Hvad skal din madbod hedde?</div>
+    <div class="input-container-createfoodstand">
+
+        <div class="font-medium-headlines">Hvad skal din madbod hedde?</div>
 
         <mat-form-field class="input-field">
             <mat-label>{{foodstand.name | slice: 0:25}}{{foodstand.name.length > 25 ? '...' : ''}}</mat-label>
             <input matInput placeholder="{{foodstand.name}}" value="">
         </mat-form-field>
 
-        
+
         <div class="font-medium-headlines">Beskrivelse af madboden</div>
 
         <mat-form-field class="input-field">
-            <mat-label>{{foodstand.description | slice: 0:25 }}{{foodstand.description.length > 25 ? '...' : ''}}</mat-label>
+            <mat-label>{{foodstand.description | slice: 0:25 }}{{foodstand.description.length > 25 ? '...' :
+                ''}}</mat-label>
             <textarea matInput></textarea>
         </mat-form-field>
 
@@ -36,18 +35,19 @@
 
     <div *ngIf="useMyAddress==false" class="input-container-createfoodstand">
         <mat-form-field class="input-field">
-            <mat-label>Vejnavn + nummer </mat-label>
-            <input matInput placeholder="" value="">
+            <mat-label>Vejnavn, nr</mat-label>
+            <input matInput placeholder=""
+                value="{{foodstand.location.streetName}} {{foodstand.location.streetNumber}}">
         </mat-form-field>
 
         <mat-form-field class="input-field">
             <mat-label>By</mat-label>
-            <input matInput placeholder="" value="">
+            <input matInput placeholder="" value="{{foodstand.location.city}}">
         </mat-form-field>
 
         <mat-form-field class="input-field">
             <mat-label>Postnummer</mat-label>
-            <input matInput placeholder="" value="">
+            <input matInput placeholder="" value="{{foodstand.location.zipCode}}">
         </mat-form-field>
     </div>
     <div class="input-container-createfoodstand">
@@ -61,6 +61,11 @@
         <div class="buttonarea">
             <button mat-raised-button color="accent" (click)="saveChangesButtonClick()">Gem ændringer</button>
         </div>
+
+    </div>
+    <div class="icon-image">
+        <img src="assets/icons/trashcan-image.png" alt="" (click)="DeleteFoodstand()">
+        <img src="assets/icons/deactivate.png" alt="" (click)="DeleteFoodstand()">
     </div>
     <app-modal [id]="foodstand.name">
         <app-popup-delete [(foodstands)]="foodstands" [foodstand]="foodstand"></app-popup-delete>

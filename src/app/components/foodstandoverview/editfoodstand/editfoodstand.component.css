@@ -47,6 +47,8 @@
 }
 
 .icon-image {
-    height: 6vh;
+    height: 8vh;
     width: auto;
+    display: flex;
+    justify-content: space-evenly;
 }

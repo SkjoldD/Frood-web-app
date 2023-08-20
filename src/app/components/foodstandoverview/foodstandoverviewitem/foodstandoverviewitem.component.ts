@@ -30,14 +30,6 @@ export class FoodstandoverviewitemComponent implements OnInit {
     this._modalserviceservice.add(this.foodstand.name);
   }
 
-  DeleteFoodstand() {
-    this._modalserviceservice.open(this.foodstand.name)
-    console.log("delete works")
-    //const index = this.foodstands.indexOf(foodstand, 0);
-    //if (index > -1) {
-    //this.foodstands.splice(index, 1);
-    // }  
-  }
 
   GetRelatedImage(grownItem: ProductFoodGrown) {
     //return _grownTypeHelperService.G

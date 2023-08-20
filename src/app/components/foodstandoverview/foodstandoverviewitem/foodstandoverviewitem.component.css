@@ -42,11 +42,6 @@
     margin-right: auto;
 }
 
-.delete-image {
-    height: 6vh;
-    width: auto;
-}
-
 .edit-image {
     height: 5vh;
     width: auto;
@@ -66,7 +61,7 @@
     width: auto;
     display: flex;
     justify-content: center;
-    margin-top: min(-33vh);
+    margin-top: min(-26vh);
     margin-left: auto;
     margin-right: auto;
 }

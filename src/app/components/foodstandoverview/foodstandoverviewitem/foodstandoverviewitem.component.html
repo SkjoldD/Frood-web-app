@@ -8,9 +8,6 @@
 
     <div class="foodstand-container input-field">
         <img class="foodstand-image" src="assets/icons/foodstandanimation.png" alt="">
-
-        <img class="delete-image" src="assets/icons/trashcan-image.png" alt="" (click)="DeleteFoodstand()">
-
         <img class="edit-image" src="assets/icons/edit-image.png" alt="" (click)="EditfoodstandClick(foodstand)">
         <div class="growntype-container-images">
             <div *ngFor="let product of foodstand.productsFoodGrown | slice:0:2">

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { Foodstand } from 'src/app/classes/foodstands/foodstand';
 import { ModalServiceService } from 'src/app/services/pop-up/modal-service.service';
 
@@ -14,7 +15,7 @@ export class PopupDeleteComponent {
   @Output() foodstandsChange = new EventEmitter<Foodstand[]>();
 
 
-  constructor(private _modalserviceservice: ModalServiceService) {
+  constructor(private _router: Router, private _modalserviceservice: ModalServiceService) {
   }
 
 
@@ -26,6 +27,7 @@ export class PopupDeleteComponent {
     if (index > -1) {
       this.foodstands.splice(index, 1);
     }
+    this._router.navigate(['foodstandOverview'])
     console.log("delete")
   }
 
