@@ -2,13 +2,13 @@
 
     <div class="font-headlines">{{foodstand.name | slice: 0:20}}
     </div>
+    <div class="font-medium-popup">X km fra dig</div>
     <div class="growntype-image-container">
         <div *ngFor="let product of foodstand.productsFoodGrown">
             <img class="growntype-image" [src]="GetRelatedImage(product)" (click)="Growntypeinfo()">
         </div>
     </div>
     <div class="font-medium-popup">
-        X km fra dig
         {{foodstand.location.streetName}}
         {{foodstand.location.streetNumber}},
         <br>

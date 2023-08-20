@@ -59,7 +59,8 @@ export class Foodstand {
             foodstand.paymentmethodMobilepay, 
             foodstand.paymentmethodCash, 
             foodstand.displayPhoneNumber, 
-            foodstand.active );
+            foodstand.active 
+            );
 
             return clone
     }

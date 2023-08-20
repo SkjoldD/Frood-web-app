@@ -20,7 +20,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldDefaultOptions, MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -52,7 +52,9 @@ import { MatSliderModule } from '@angular/material/slider';
 import { PopupfoodstandcontentComponent } from './components/startingpage/popupfoodstandcontent/popupfoodstandcontent.component';
 import { EditfoodstandComponent } from './components/foodstandoverview/editfoodstand/editfoodstand.component';
 
-
+const appearance: MatFormFieldDefaultOptions = {
+  appearance: 'outline'
+};
 @NgModule({
   declarations: [
     AppComponent,
@@ -107,7 +109,8 @@ import { EditfoodstandComponent } from './components/foodstandoverview/editfoods
     
     GoogleMapsModule
   ],
-  providers: [HoursdayTransformerPipe],
+  providers: [HoursdayTransformerPipe, { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
+    useValue: {appearance:'outline'}}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

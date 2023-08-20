@@ -4,18 +4,20 @@
     <div class="input-container-createfoodstand">
 
         <div class="font-medium-headlines">Hvad skal din madbod hedde?</div>
-
-        <mat-form-field class="input-field">
+        <br>
+        <br>
+        <mat-form-field appearance="outline" class="input-field">
             <mat-label>Navn</mat-label>
-            <input matInput placeholder="" [(ngModel)]="foodstand.name">
+            <input matInput matInput placeholder="Input placeholder" [(ngModel)]="temporaryFoodstand.name">
         </mat-form-field>
 
 
         <div class="font-medium-headlines">Beskrivelse af madboden</div>
-
+<br>
+<br>
         <mat-form-field class="input-field">
             <mat-label>Beskrivelse</mat-label>
-            <textarea matInput>{{temporaryFoodstand.description}}</textarea>
+            <textarea matInput [(ngModel)]="temporaryFoodstand.description"></textarea>
         </mat-form-field>
 
         <div class="font-medium-headlines">Madbodens placering</div>
