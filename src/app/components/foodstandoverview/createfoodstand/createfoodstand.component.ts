@@ -16,6 +16,11 @@ interface MarkerProperties {
 })
 export class CreatefoodstandComponent implements OnInit {
 
+  useMyAddress: boolean = false;
+  paymentmethodMobilepay: boolean = false;
+  paymentmethodCash: boolean = false;
+  displayPhoneNumber: boolean = false;
+
   zoom = 12;
   center: google.maps.LatLngLiteral = { lat: 55.6638295, lng: 12.5414299 };
 
@@ -60,14 +65,16 @@ export class CreatefoodstandComponent implements OnInit {
   constructor(private _router: Router) {
   }
 
-  UploadnewfoodstandButtonClick() {
-    this._router.navigate(['startingpage'])
-  }
-
-  useMyAddress: boolean = false;
-
   UseMyAddress() {
     this.useMyAddress = !this.useMyAddress;
     console.log(this.useMyAddress);
   }
+
+  UploadnewfoodstandButtonClick() {
+    console.log(this.paymentmethodCash);
+    console.log(this.paymentmethodMobilepay);
+    console.log(this.displayPhoneNumber);
+    this._router.navigate(['startingpage'])
+  }
+
 }

@@ -30,7 +30,6 @@ export class FoodstandoverviewitemComponent implements OnInit {
     this._modalserviceservice.add(this.foodstand.name);
   }
 
-
   GetRelatedImage(grownItem: ProductFoodGrown) {
     //return _grownTypeHelperService.G
     return this._grownTypeHelperService.GetProductImage(grownItem.grownType);

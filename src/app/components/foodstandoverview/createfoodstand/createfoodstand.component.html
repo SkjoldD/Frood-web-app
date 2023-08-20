@@ -49,11 +49,11 @@
     </div>
     <div class="input-container-createfoodstand">
         <div class="font-medium-headlines">Betalingsmuligheder</div>
-        <div class="toggle-text input-field">Mobilepay <mat-slide-toggle class="toggle-placing"></mat-slide-toggle>
+        <div class="toggle-text input-field">Mobilepay <mat-slide-toggle class="toggle-placing" [(ngModel)]="paymentmethodMobilepay"></mat-slide-toggle>
         </div>
-        <div class="toggle-text input-field">Kontant <mat-slide-toggle class="toggle-placing"></mat-slide-toggle>
+        <div class="toggle-text input-field">Kontant <mat-slide-toggle class="toggle-placing" [(ngModel)]="paymentmethodCash"></mat-slide-toggle>
         </div>
-        <div class="toggle-text input-field">Vis mobil nr. <mat-slide-toggle class="toggle-placing"></mat-slide-toggle>
+        <div class="toggle-text input-field">Vis mobil nr. <mat-slide-toggle class="toggle-placing" [(ngModel)]="displayPhoneNumber"></mat-slide-toggle>
         </div>
         <div class="buttonarea">
             <button mat-raised-button color="accent" (click)="UploadnewfoodstandButtonClick()">Opret</button>

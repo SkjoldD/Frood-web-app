@@ -10,6 +10,10 @@ export class Foodstand {
         private _name : string = "",
         private _description : string = "",
         private _productsFoodGrown : ProductFoodGrown[] = [],
+        private _paymentmethodMobilepay : boolean = false,
+        private _paymentmethodCash : boolean = false, 
+        private _displayPhoneNumber : boolean = false,
+        private _active: boolean = true
         ){
 
     }
@@ -31,4 +35,34 @@ export class Foodstand {
 
     get productsFoodGrown(): ProductFoodGrown[]{return this._productsFoodGrown;}
     set productsFoodGrown(_val : ProductFoodGrown[]){this._productsFoodGrown = _val;}
+
+    get paymentmethodMobilepay(): boolean{return this._paymentmethodMobilepay;}
+    set paymentmethodMobilepay(_val : boolean){this._paymentmethodMobilepay = _val;}
+
+    get paymentmethodCash(): boolean{return this._paymentmethodCash;}
+    set paymentmethodCash(_val : boolean){this._paymentmethodCash = _val;}
+
+    get displayPhoneNumber(): boolean{return this._displayPhoneNumber;}
+    set displayPhoneNumber(_val : boolean){this._displayPhoneNumber = _val;}
+
+    get active(): boolean{return this._active;}
+    set active(_val : boolean){this._active = _val;}
+
+    DeepClone(foodstand : Foodstand){
+        let clone = new Foodstand(
+            foodstand.id, 
+            foodstand.location, 
+            foodstand.dateCreated, 
+            foodstand.name, 
+            foodstand.description, 
+            foodstand.productsFoodGrown, 
+            foodstand.paymentmethodMobilepay, 
+            foodstand.paymentmethodCash, 
+            foodstand.displayPhoneNumber, 
+            foodstand.active );
+
+            return clone
+    }
 }
+
+

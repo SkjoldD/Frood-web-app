@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { Foodstand } from 'src/app/classes/foodstands/foodstand';
 import { FoodstandService } from 'src/app/services/http/foodstand/foodstand.service';
@@ -20,17 +20,13 @@ interface MarkerProperties {
 
 
 export class EditfoodstandComponent implements OnInit {
-  constructor(
-    private _foodstandService: FoodstandService,
-    private _router: Router,
-    private _modalserviceservice: ModalServiceService,
-    private _selectedFoodstandService: SelectedFoodstandService) {
-      this._selectedFoodstandService.selectedFoodstand.subscribe(val => { this.foodstand = val; console.log(this.foodstand); console.log("test"); });
-      this.foodstands = this._foodstandService.read_all();
-  }
-  @Input() foodstand!: Foodstand;
-  @Input() foodstands!: Foodstand[];
-  @Output() foodstandsChange = new EventEmitter<Foodstand[]>();
+
+  temporaryFoodstand!: Foodstand;
+  foodstand!: Foodstand;
+  foodstands!: Foodstand[];
+  foodstandsChange = new EventEmitter<Foodstand[]>();
+
+  useMyAddress: boolean = false;
 
   zoom = 12;
   center: google.maps.LatLngLiteral = { lat: 55.6638295, lng: 12.5414299 };
@@ -46,11 +42,21 @@ export class EditfoodstandComponent implements OnInit {
     disableDefaultUI: true
   };
 
- 
+  constructor(
+    private _foodstandService: FoodstandService,
+    private _router: Router,
+    private _modalserviceservice: ModalServiceService,
+    private _selectedFoodstandService: SelectedFoodstandService) {
+    this._selectedFoodstandService.selectedFoodstand.subscribe(val => {
+      this.temporaryFoodstand = val.DeepClone(val);
+      this.foodstand = val;
+      this._modalserviceservice.add(this.foodstand.name);
+      console.log(this.foodstand); console.log("test");
+    });
+    this.foodstands = this._foodstandService.read_all();
+  }
 
-  ngOnInit() : void {
-    this._modalserviceservice.add(this.foodstand.name);
-
+  ngOnInit(): void {
 
     return this.geogeo();
   }
@@ -74,12 +80,6 @@ export class EditfoodstandComponent implements OnInit {
       enableHighAccuracy: true
     });
   }
-  
-  saveChangesButtonClick() {
-    this._router.navigate(['foodstandOverview'])
-  }
-
-  useMyAddress: boolean = false;
 
   UseMyAddress() {
     this.useMyAddress = !this.useMyAddress;
@@ -92,5 +92,10 @@ export class EditfoodstandComponent implements OnInit {
     //if (index > -1) {
     //this.foodstands.splice(index, 1);
     // }  
+  }
+
+  saveChangesButtonClick() {
+    this.foodstand = this.temporaryFoodstand;
+    this._router.navigate(['foodstandOverview'])
   }
 }
