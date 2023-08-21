@@ -1,5 +1,23 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
 
+.top-icons {
+    height: 12vh;
+    width: auto;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.30));
+
+;}
+
+.dashed-line {
+    border: 1% dashed;
+    color: #B6D9C9;
+    background-repeat: repeat-x;
+    width: 100%;
+    background-size: contain;
+}
+
 .menu-bottom-container {
     width: 80px;
     height: 80px;

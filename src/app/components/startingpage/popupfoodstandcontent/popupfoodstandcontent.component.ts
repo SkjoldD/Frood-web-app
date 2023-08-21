@@ -28,7 +28,7 @@ export class PopupfoodstandcontentComponent implements OnInit {
   }
   
   GetRelatedImage(grownItem: ProductFoodGrown) {
-    //return _grownTypeHelperService.G
+    //return _grownTypeHelperService.
     return this._grownTypeHelperService.GetProductImage(grownItem.grownType);
   }
 

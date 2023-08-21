@@ -13,13 +13,13 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 10%; 
 }
 
 .growntype-image {
     height: 80%;
     width: auto;
 }
+
 .buttonarea {
     display: flex;
     justify-content: space-around;

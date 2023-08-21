@@ -1,14 +1,20 @@
-<app-header [title]="'Madboder'"></app-header>
 <div class="complete-view">
+    <app-header [title]="'Madboder'"></app-header>
     <br>
-    <div class="buttonarea">
-        <button mat-raised-button color="accent" (click)="ProfileButtonClick()">Min profil</button>
+    <div class="top-icons">
+        <img src="assets/icons/new-foodstand.png" (click)="CreatefoodstandButtonClick()">
+        <img src="assets/icons/profile-icon.png" (click)="ProfileButtonClick()">
     </div>
-    <br>
+    <img class="dashed-line" src="assets/food-animations/dashed-line.png" />
+
+<br>
     <div class="input-container container-grid" *ngFor="let foodstand of foodstands">
         <app-foodstandoverviewitem [(foodstands)]="foodstands" [foodstand]="foodstand"></app-foodstandoverviewitem>
         <br>
+        <img class="dashed-line" src="assets/food-animations/dashed-line.png" />
+
     </div>
+
     <div class="menu-bottom-container">
         <div class="menu-bottom-container-window">
             <button class="menubutton" (click)="StartingpageButtonClick()">
@@ -16,11 +22,5 @@
             </button>
         </div>
     </div>
-    
-    <div class="buttonarea">
-        <button mat-raised-button color="accent" (click)="CreatefoodstandButtonClick()">Opret ny madbod</button>
-    </div>
 
-    
-    
 </div>

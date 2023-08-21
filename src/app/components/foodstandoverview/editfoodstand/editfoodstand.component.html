@@ -1,20 +1,16 @@
-<app-header [title]="'Redigér'"></app-header>
-
 <div class="complete-view">
+    <app-header [title]="'Redigér'"></app-header>
     <div class="input-container-createfoodstand">
-
         <div class="font-medium-headlines">Hvad skal din madbod hedde?</div>
         <br>
         <br>
-        <mat-form-field appearance="outline" class="input-field">
+        <mat-form-field class="input-field">
             <mat-label>Navn</mat-label>
-            <input matInput matInput placeholder="Input placeholder" [(ngModel)]="temporaryFoodstand.name">
+            <input matInput placeholder="Input placeholder" [(ngModel)]="temporaryFoodstand.name">
         </mat-form-field>
-
-
         <div class="font-medium-headlines">Beskrivelse af madboden</div>
-<br>
-<br>
+        <br>
+        <br>
         <mat-form-field class="input-field">
             <mat-label>Beskrivelse</mat-label>
             <textarea matInput [(ngModel)]="temporaryFoodstand.description"></textarea>
@@ -24,7 +20,6 @@
         <div class="input-field">
             <section class="toggle-text"> Brug min placering
                 <mat-checkbox class="checkbox-margin" (change)="UseMyAddress()"></mat-checkbox>
-
             </section>
         </div>
     </div>

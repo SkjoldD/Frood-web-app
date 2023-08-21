@@ -12,7 +12,9 @@ export class FoodstandProductGrownItemComponent implements OnInit {
 
   @Input() grownItem!: ProductFoodGrown;
 
-  constructor(private _router: Router, private _grownTypeHelperService: GrowntypeHelperServiceService) {
+  constructor(
+    private _router: Router, 
+    private _grownTypeHelperService: GrowntypeHelperServiceService) {
   }
 
   ngOnInit(): void {
@@ -28,5 +30,6 @@ export class FoodstandProductGrownItemComponent implements OnInit {
   }
   AnnounceSold() {
     this.grownItem.amount = 0;
+    console.log(this.grownItem)
   }
 }
